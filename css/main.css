@@ -1,0 +1,50 @@
+@media only screen and (max-width: 800px) {
+    .hacked {
+        font-size: 10vw;
+    }
+
+    .beta {
+        font-size: 7vw;
+    }
+
+    #header {
+        text-align: center;
+        margin-top: 25vh;
+    }
+
+    #hdr-description {
+        font-size: 3.7vw;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .prompt {
+        font-size: 5em;
+        font-weight: 900;
+        transform: scaleX(0.25);
+    }
+
+    .hacked {
+        font-size: 5em;
+    }
+
+    .beta {
+        font-size: 3em;
+        font-weight: 100;
+    }
+
+    .cursor {
+        font-size: 5em;
+        font-weight: 900;
+    }
+
+    #header {
+        text-align: center;
+        margin-top: 25vh;
+    }
+
+    .description {
+        font-size: 2.5em;
+        font-weight: 200;
+    }
+}
