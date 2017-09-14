@@ -18,10 +18,16 @@
 }
 
 @media screen and (min-width: 800px) {
+    body {
+        background-color: #16703d;
+		background-image: url("../images/overlay.png");
+        color: white;
+        overflow: scroll;
+    }
+
     .prompt {
         font-size: 5em;
         font-weight: 900;
-        transform: scaleX(0.25);
     }
 
     .hacked {
@@ -46,5 +52,35 @@
     .description {
         font-size: 2.5em;
         font-weight: 200;
+    }
+
+    .sponsorship_request {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        bottom: 2em;
+    }
+
+    .sponsor_prompt {
+        display: inline-block;
+        font-size: 2em;
+        font-weight: 200;
+    }
+
+    .button {
+        display: inline-block;
+        text-decoration: none;
+        border: 1pt solid white;
+        color: white;
+        padding: 7pt;
+        border-radius: 6pt;
+        font-size: 0.8em;
+        font-weight: 200;
+    }
+
+    .button:hover {
+        background-color: white;
+        color: #16703d;
+        text-decoration: none;
     }
 }
