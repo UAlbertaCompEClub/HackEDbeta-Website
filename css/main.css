@@ -91,6 +91,18 @@ body {
 }
 
 @media only screen and (max-width: 400px) {
+    .prompt, .hacked, .cursor {
+        font-size: 11vw; 
+    }
+
+    .beta {
+        font-size: 9vw; 
+    }
+
+    .sponsor_prompt {
+        font-size: 4vw; 
+    }
+
     .description {
         margin-top: 4vw;
         font-size: 8vw;
