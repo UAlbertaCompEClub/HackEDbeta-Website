@@ -2,7 +2,7 @@ body {
     background-color: #16703d;
     background-image: url("../images/overlay.png");
     color: white;
-    overflow: scroll;
+    overflow: none;
 }
 
 .prompt {
