@@ -12,54 +12,14 @@ body {
     }
 
     /* Main Title */
-        .prompt {
-            font-size: 5em;
-            font-weight: 900;
-        }
-
-        .hacked {
-            font-size: 5em;
-        }
-
-        .beta {
-            font-size: 3em;
-            font-weight: 100;
-        }
-
-        .cursor {
-            font-size: 5em;
-            font-weight: 900;
-        }
-
+        
         .logo{
-            width: 50%;
+            width: 30vw;
         }
 
-        @media only screen and (min-width: 400px) and (max-width: 720px) {
-            .prompt {
-                font-size: 12vw;
-            }
-
-            .hacked {
-                font-size: 12vw;
-            }
-
-            .beta {
-                font-size: 7vw;
-            }
-
-            .cursor {
-                font-size: 12vw;
-            }
-        }
-
-        @media only screen and (max-width: 400px) {
-            .prompt, .hacked, .cursor {
-                font-size: 11vw; 
-            }
-
-            .beta {
-                font-size: 9vw; 
+        @media only screen and (max-width: 720px) {
+            .logo{
+                width: 20vw;
             }
         }
 
