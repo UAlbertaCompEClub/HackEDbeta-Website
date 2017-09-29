@@ -1,5 +1,5 @@
 body {
-    background-color: #16703d;
+    background-color: #94D3A3;
     background-image: url("../images/overlay.png");
     color: white;
 }
@@ -83,4 +83,25 @@ body {
             color: #16703d;
             text-decoration: none;
         }
+
+    /* Paper Page */
         
+        .paper{
+            background-color: #FFFFFF;
+            min-width: 95vw;
+            min-height: 95vh;
+            padding: 1in;
+            position: absolute;
+            margin-top: 57.5vh;
+            margin-left: 2.5vw;
+        }
+
+        .dontMove{
+            position: fixed;
+            min-width: 95vw;
+            min-height: 95vh;
+            margin-top: 2.5vh;
+            margin-left: 2.5vw;
+            top: 0;
+            left: 0;
+        }
