@@ -2,7 +2,7 @@ var scrollPercent; // Scrolled  Y / Page height
 var state; // Dependent on page, 0 is no page and 3 is last page (more can be added easily)
 
 document.addEventListener("DOMContentLoaded", function(event) {
-    scrollPercent = window.scrollY / window.innerHeight;
+    scrollPercent = window.scrollY / window.innerHeight; //update scroll percent
     
     // Set State and change BG colour on load/refresh
     if (scrollPercent < 1) {
@@ -51,7 +51,7 @@ function checkScroll(){
         $(".paper").animate({ color: "#F1C37F" }, 300);
         console.log(state);
     }
-    
+    // check when border needs to be activates
     if (state > 0) {
         $("#top").addClass("activated");
     }else {
