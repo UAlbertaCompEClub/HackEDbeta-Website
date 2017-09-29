@@ -1,34 +1,53 @@
+var scrollPercent;
+var state;
+
 document.addEventListener("DOMContentLoaded", function(event) {
-    chooseBackgroundColour();
+    scrollPercent = window.scrollY / window.innerHeight;
     
     
+    if (scrollPercent < 1) {
+        state = 0;
+        document.body.style.backgroundColor = "#94D3A3";
+    }else if (scrollPercent > 1 && scrollPercent < 2) {
+        state = 1;
+        document.body.style.backgroundColor = "#80B1F5";
+    }else if (scrollPercent > 2 && scrollPercent < 3) {
+        state = 2;
+        document.body.style.backgroundColor = "#E06D6F";
+    }else if (scrollPercent > 3) {
+        state = 3;
+        document.body.style.backgroundColor = "#F1C37F";
+    }
 });
 
 
 function checkScroll(){
-    var scrollPercent = window.scrollY / window.innerHeight;
+    scrollPercent = window.scrollY / window.innerHeight;
     console.log(scrollPercent);
-    if (window.scrollY > 100) {
-        document.body.style.background = "#80B1F5";
+    
+    
+    if (scrollPercent < 1 && state != 0) {
+        state = 0;
+        $("html body").animate({ backgroundColor: "#94D3A3" }, 1000);
+    }else if (scrollPercent > 1 && scrollPercent < 2 && state != 1) {
+        state = 1;
+        $("html body").animate({ backgroundColor: "#80B1F5" }, 1000);
+    }else if (scrollPercent > 2 && scrollPercent < 3 && state != 2) {
+        state = 2;
+        $("html body").animate({ backgroundColor: "#E06D6F" }, 1000);
+    }else if (scrollPercent > 3 && state != 3) {
+        state = 3;
+        $("html body").animate({ backgroundColor: "#F1C37F" }, 1000);
     }
 }
 
 
-function chooseBackgroundColour() {
-    /*var colour = Math.floor(Math.random() * (5 - 1) + 1); // four colours
-    console.log(colour); 
-    switch (colour) {
-        case 1: 
-            $("body").css("backgroundColor", "#80B1F5"); 
-            break; 
-        case 2: 
-            $("body").css("backgroundColor", "#94D3A3"); 
-            break; 
-        case 3: 
-            $("body").css("backgroundColor", "#E06D6F"); 
-            break; 
-        case 4: 
-            $("body").css("backgroundColor", "#F1C37F"); 
-            break; 
-    } */
-}
+//Background Colours:
+/*
+
+#80B1F5 BLUE
+#94D3A3 GREEN
+#E06D6F RED
+#F1C37F YELLOW
+    
+*/
