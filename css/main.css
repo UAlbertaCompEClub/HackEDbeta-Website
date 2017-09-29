@@ -8,6 +8,7 @@
     --BLACK: #000000;
     
     --homeText: var(--GREEN)
+}
 
 body {
     color: var(--homeText);
