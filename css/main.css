@@ -86,13 +86,13 @@ body {
         
         .paper{
             background-color: #FFFFFF;
-            min-width: 95vw;
+            min-width: 70vw;
             min-height: 95vh;
             padding: 1in;
             position: absolute;
             top:0;
             margin-top: 100vh;
-            margin-left: 2.5vw;
+            margin-left: 15vw;
         }
 
         .inner{
@@ -106,17 +106,20 @@ body {
         #one{
             background-color: white;
             bottom: 0%;
+            color: #80B1F5;
         }
 
         #two{
             background-color: white;
             bottom: -100%;
+            color: #E06D6F;
         }
 
         #three{
             background-color: white;
             bottom: -200%;
             margin-bottom: 2.5vh;
+            color: #F1C37F
         }
 
     /* Border */

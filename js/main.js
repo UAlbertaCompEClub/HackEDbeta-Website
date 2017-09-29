@@ -8,19 +8,19 @@ document.addEventListener("DOMContentLoaded", function(event) {
     if (scrollPercent < 1) {
         state = 0;
         $(".bg").css("backgroundColor", "#94D3A3");
-        $(".paper").css("color", "#94D3A3");
+        //$(".paper").css("color", "#94D3A3");
     }else if (scrollPercent > 0.975 && scrollPercent < 1.825) {
         state = 1;
         $(".bg").css("backgroundColor", "#80B1F5");
-        $(".paper").css("color", "#80B1F5");
+        //$(".paper").css("color", "#80B1F5");
     }else if (scrollPercent > 1.825 && scrollPercent < 2.725) {
         state = 2;
         $(".bg").css("backgroundColor", "#E06D6F");
-        $(".paper").css("color", "#E06D6F");
+        //$(".paper").css("color", "#E06D6F");
     }else if (scrollPercent > 2.725) {
         state = 3;
         $(".bg").css("backgroundColor", "#F1C37F");
-        $(".paper").css("color", "#F1C37F");
+        //$(".paper").css("color", "#F1C37F");
     }
 });
 
