@@ -1,5 +1,16 @@
+:root{
+    --BLUE: #80B1F5;
+    --RED: #E06D6F;
+    --YELLOW: #F1C37F;
+    --GREEN: #94D3A3;
+    --DGREEN: #16703D;
+    --WHITE: #FFFFFF;
+    --BLACK: #000000;
+    
+    --homeText: var(--GREEN)
+
 body {
-    color: white;
+    color: var(--homeText);
 }
 
 /* Header section */
@@ -68,8 +79,8 @@ body {
         .button {
             display: inline-block;
             text-decoration: none;
-            border: 1pt solid white;
-            color: white;
+            border: 1pt solid var(--homeText);
+            color: var(--homeText);
             padding: 7pt;
             border-radius: 6pt;
             font-size: 0.8em;
