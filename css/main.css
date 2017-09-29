@@ -2,7 +2,6 @@ body {
     background-color: #16703d;
     background-image: url("../images/overlay.png");
     color: white;
-    overflow: none;
 }
 
 /* Header section */
