@@ -633,7 +633,7 @@ header h2:after,
 .beta {
     font-size: 3em;
     font-weight: 100;
-    
+    font-family: 'Open Sans Condensed', sans-serif;
 }
 
 .cursor {
