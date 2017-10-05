@@ -474,7 +474,7 @@ header .loading h2,
 }
 
 header {
-    width: 720px;
+    width: 90%;
     margin: 3em auto 0;
     text-align: center
 }
@@ -489,6 +489,8 @@ header h1 {
 header h2 {
     font-style: italic;
     padding: 0 10%;
+    font-size: 1.5em; 
+    font-weight: 500; 
 }
 
 .special-hr,
