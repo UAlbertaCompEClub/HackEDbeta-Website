@@ -13,9 +13,14 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 function slideChange(reqSlide) {
     //when slide changes, animate the slide to the side
-
+    var moveStr = "-" + String(reqSlide - 1) + "00vw";
+    
     console.log("reqSlide: " + reqSlide);
-
+    
+    $(".page").animate({
+        left: moveStr
+    },300);
+    
     //set slide's new state
     slide = reqSlide;
 }

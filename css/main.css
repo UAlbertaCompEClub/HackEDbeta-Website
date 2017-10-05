@@ -593,7 +593,7 @@ header h2:after,
 }
 
 .pagesContainer .widePagesContainer .page{
-    left: 0vh; /* this is the value you gotta change to scroll in JS. */
+    left: -0vw; /* this is the value you gotta change to scroll in JS. */
     float: left;
     position: relative;
     width: 100vw;
