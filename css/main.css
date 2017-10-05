@@ -591,7 +591,6 @@ header h2:after,
     left: 1000vw;
     width: 400vw;
     height: 90vh;
-    background-color: black;
 }
 
 .pagesContainer .widePagesContainer .page {
@@ -603,28 +602,28 @@ header h2:after,
     height: 100%;
     margin: 0px;
     overflow-x: scroll;
+    padding: 1in;
 }
 
 #one {
-    background-color: blue;
+    background-color: transparent;
 }
 
 #two {
-    background-color: blueviolet;
+    background-color: transparent;
 }
 
 #three {
-    background-color: green;
+    background-color: transparent;
 }
 
 #four {
-    background-color: yellow;
+    background-color: transparent;
 }
 
 .prompt {
     font-size: 5em;
     font-weight: 900;
-    
 }
 
 .hacked {
@@ -635,7 +634,8 @@ header h2:after,
 .beta {
     font-size: 3em;
     font-weight: 100;
-    font-family: 'Open Sans Condensed', sans-serif;
+    font-family: 'Saira Condensed', sans-serif;
+    font-weight: 200;
 }
 
 .cursor {
