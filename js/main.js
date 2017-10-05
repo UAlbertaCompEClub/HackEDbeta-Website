@@ -1,4 +1,4 @@
-var slide = 0; //current slide
+var slide = 1; //current slide
 
 var BLUE = "#80B1F5";
 var GREEN = "#94D3A3";
@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 function slideChange(reqSlide) {
     //when slide changes, animate the slide to the side
 
-
+    console.log("reqSlide: " + reqSlide);
 
     //set slide's new state
     slide = reqSlide;
