@@ -577,14 +577,14 @@ header h2:after,
     background: #639bb4
 }
 
-.pagesContainer{
+.pagesContainer {
     top: 0;
     width: 100vw;
     height: 90vh;
     margin-top: 5vh;
-    margin-bottom: 15vh;
 }
-.pagesContainer .widePagesContainer{
+
+.pagesContainer .widePagesContainer {
     top: 0px;
     left: 1000vw;
     width: 400vw;
@@ -592,8 +592,9 @@ header h2:after,
     background-color: black;
 }
 
-.pagesContainer .widePagesContainer .page{
-    left: -0vw; /* this is the value you gotta change to scroll in JS. */
+.pagesContainer .widePagesContainer .page {
+    left: -0vw;
+    /* this is the value you gotta change to scroll in JS. */
     float: left;
     position: relative;
     width: 100vw;
@@ -601,17 +602,43 @@ header h2:after,
     margin: 0px;
     overflow-x: scroll;
 }
-#one{
+
+#one {
     background-color: blue;
 }
-#two{
+
+#two {
     background-color: blueviolet;
 }
-#three{
+
+#three {
     background-color: green;
 }
-#four{
+
+#four {
     background-color: yellow;
+}
+
+.prompt {
+    font-size: 5em;
+    font-weight: 900;
+    
+}
+
+.hacked {
+    font-size: 5em;
+    
+}
+
+.beta {
+    font-size: 3em;
+    font-weight: 100;
+    
+}
+
+.cursor {
+    font-size: 5em;
+    font-weight: 900;
 }
 
 @media all and (max-width: 767px) {

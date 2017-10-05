@@ -7,7 +7,7 @@ var YELLOW = "#F1C37F";
 var DGREEN = "#16703D";
 
 document.addEventListener("DOMContentLoaded", function (event) {
-    //do nothing?
+    startCursorBlinking();
 });
 
 
@@ -23,6 +23,18 @@ function slideChange(reqSlide) {
     
     //set slide's new state
     slide = reqSlide;
+}
+
+function startCursorBlinking() {
+    var isCursorVisbile = true
+    setInterval(function() {
+        if (isCursorVisbile) {
+            $("#cursor").css("visibility", "hidden")
+        } else {
+            $("#cursor").css("visibility","visible")
+        }
+        isCursorVisbile = !isCursorVisbile
+    }, 600)
 }
 
 /*
