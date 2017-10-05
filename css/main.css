@@ -486,7 +486,7 @@ header h1 {
 
 header h2 {
     font-style: italic;
-    padding: 0 10%
+    padding: 0 10%;
 }
 
 .special-hr,
@@ -499,12 +499,12 @@ header h2:after,
     height: 0px;
     display: block;
     border: 1px solid;
-    border-style: inset
+    border-style: inset;
 }
 
 .section-title-container {
     display: table;
-    margin: 0 auto
+    margin: 0 auto;
 }
 
 .section-title {
@@ -535,10 +535,11 @@ header h2:after,
 }
 
 .section-title h3 {
-    font-size: 3.5em;
+    font-size: 3em;
     line-height: 0.804em;
     margin: 0;
-    padding: 1.1em 10% 0
+    padding: 1.6em 0 0 0;
+    font-family: 'Yantramanav', sans-serif;
 }
 
 .no-touch .section-title:hover {
@@ -574,7 +575,34 @@ header h2:after,
     background: #639bb4
 }
 
+.pagesContainer{
+    background-color: black;
+    top: 0;
+    left: 100vh;
+    width: 400vw;
+    height: 90vh;
+    margin-bottom: 15vh;
+    overflow-x: visible;
+}
 
+.pagesContainer .page{
+    float: left;
+    width: 100vw;
+    height: 100%;
+    margin: 0px;
+}
+#one{
+    background-color: blue;
+}
+#two{
+    background-color: blueviolet;
+}
+#three{
+    background-color: brown;
+}
+#four{
+    background-color: red;
+}
 
 @media all and (max-width: 767px) {
     * {
