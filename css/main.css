@@ -4,11 +4,13 @@
     --YELLOW: #F1C37F;
     --GREEN: #94D3A3;
     --DGREEN: #16703D;
-    --WHITE: #FFFFFF;
+    --OFFWHITE: #F4F4F4;
     --BLACK: #000000;
     
-    --homeText: var(--GREEN);
-    --mainBG: var(--DGREEN);
+    --homeText: var(--DGREEN);
+    --mainBG: var(--OFFWHITE);
+    
+    font-family: 'Yantramanav', sans-serif;
 }
 
 body {
@@ -18,7 +20,7 @@ body {
 /* Header section */
     #header {
         text-align: center;
-        margin-top: 25vh;
+        margin-top: 10vh;
     }
 
     /* Main Title */
@@ -35,8 +37,9 @@ body {
 
     /* One line description */
         .description {
-            font-size: 2.5em;
+            font-size: 3vh;
             font-weight: 200;
+            max-width: 50vw;
         }
 
         @media only screen and (min-width: 400px) and (max-width: 720px) {
@@ -52,127 +55,9 @@ body {
             }
         }
 
-    /* Bottom links */
-        .sponsorship_request {
-            position: absolute;
-            width: 100%;
-            left: 0;
-            bottom: 2em;
-        }
+/* background */
 
-        .sponsor_prompt {
-            display: inline-block;
-            font-size: 2em;
-            font-weight: 200;
-        }
-
-        @media only screen and (min-width: 400px) and (max-width: 720px) {
-            .sponsor_prompt {
-                font-size: 4vw;
-            }
-        }
-
-        @media only screen and (max-width: 400px) {
-            .sponsor_prompt {
-                font-size: 4vw; 
-            }
-        }
-
-        .button {
-            display: inline-block;
-            text-decoration: none;
-            border: 1pt solid var(--homeText);
-            color: var(--homeText);
-            padding: 7pt;
-            border-radius: 6pt;
-            font-size: 0.8em;
-            font-weight: 200;
-        }
-
-        .button:hover {
-            background-color: white;
-            color: #16703d;
-            text-decoration: none;
-        }
-
-    /* Paper Page */
-        
-        .paper{
-            background-color: #FFFFFF;
-            min-width: 70vw;
-            min-height: 95vh;
-            padding: 1in;
-            position: absolute;
-            top:0;
-            margin-top: 100vh;
-            margin-left: 15vw;
-        }
-
-        .inner{
-            position:absolute;
-            min-width: 100%;
-            height: 100%;
-            left: 0;
-            padding: 1in;
-        }
-
-        #one{
-            background-color: white;
-            bottom: 0%;
-            color: #80B1F5;
-        }
-
-        #two{
-            background-color: white;
-            bottom: -100%;
-            color: #E06D6F;
-        }
-
-        #three{
-            background-color: white;
-            bottom: -200%;
-            margin-bottom: 2.5vh;
-            color: #F1C37F
-        }
-
-    /* Border */
-
-        .activated{
-            opacity: 1.0 !important;
-        }
-
-        .border{
-            position: fixed;
-            min-width: 100%;
-            min-height: 100%;
-            height: 100%;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            z-index: 1000;
-            padding: 0 0 0 0;
-        }
-
-        #top{
-            position: fixed;
-            top:0;
-            min-width: 100vw;
-            height: 2.5vh;
-            margin: 0;
-            opacity: 0;
-        }
-
-        #bottom{
-            position: fixed;
-            bottom:0;
-            min-width: 100vw;
-            height: 2.5vh;
-            margin: 0;
-        }
-
-        /* background + border colours */
-
-        .bg{
-            background-color: var(--mainBG);
-            background-image: url("../images/overlay.png");
-        }
+    .bg{
+        background-color: var(--mainBG);
+        background-image: url("../images/overlay.png");
+    }
