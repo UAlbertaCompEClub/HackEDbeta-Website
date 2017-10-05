@@ -7,7 +7,8 @@
     --WHITE: #FFFFFF;
     --BLACK: #000000;
     
-    --homeText: var(--GREEN)
+    --homeText: var(--GREEN);
+    --mainBG: var(--DGREEN);
 }
 
 body {
@@ -172,6 +173,6 @@ body {
         /* background + border colours */
 
         .bg{
-            background-color: #94D3A3;
+            background-color: var(--mainBG);
             background-image: url("../images/overlay.png");
         }
