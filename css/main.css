@@ -2,6 +2,12 @@
 
 /* Header Section */
 
+    header {
+        width: 90%;
+        margin: 3em auto 0;
+        text-align: center
+    }
+
     header h1 {
         font-size: 6.7em;
         color: #464646;
@@ -29,51 +35,10 @@
         border-style: inset;
     }
 
-    .section-title-container {
+    .bubbleNav {
         display: table;
         margin: 0 auto;
     }
-
-    .section-title {
-        width: 212px;
-        height: 212px;
-        -webkit-border-radius: 106px;
-        -moz-border-radius: 106px;
-        -ms-border-radius: 106px;
-        -o-border-radius: 106px;
-        border-radius: 106px;
-        box-shadow: rgba(70, 70, 70, 0.2) 0 1px 0 1px;
-        margin-top: 2em;
-        margin-left: -10px;
-        color: #fff;
-        text-align: center;
-        position: relative;
-        float: left;
-        -webkit-transition-property: opacity;
-        -moz-transition-property: opacity;
-        -ms-transition-property: opacity;
-        -o-transition-property: opacity;
-        transition-property: opacity;
-        -webkit-transition-duration: 1s;
-        -moz-transition-duration: 1s;
-        -ms-transition-duration: 1s;
-        -o-transition-duration: 1s;
-        transition-duration: 1s
-    }
-
-    .section-title h3 {
-        font-size: 3em;
-        line-height: 0.804em;
-        margin: 0;
-        padding: 1.6em 0 0 0;
-        font-family: 'Yantramanav', sans-serif;
-    }
-
-    .no-touch .section-title:hover {
-        opacity: 1
-    }
-
-
 
     .prompt {
         font-size: 5em;
@@ -99,7 +64,7 @@
 
     @media all and (max-width: 767px) {
         * {
-            float: none !important
+            /*float: none !important*/
         }
         .section-heading:before,
         .section-heading:after {
@@ -121,12 +86,59 @@
         header h1 {
             font-size: 4em
         }
-        .section-title-container {
+    }
+
+/* Button Section */
+
+    .section-title, .bubble {
+        width: 212px;
+        height: 212px;
+        -webkit-border-radius: 106px;
+        -moz-border-radius: 106px;
+        -ms-border-radius: 106px;
+        -o-border-radius: 106px;
+        border-radius: 106px;
+        box-shadow: rgba(70, 70, 70, 0.2) 0 1px 0 1px;
+        margin-top: 2em;
+        margin-left: -10px;
+        color: #fff !important;
+        text-align: center;
+        position: relative;
+        float: left;
+        -webkit-transition-property: opacity;
+        -moz-transition-property: opacity;
+        -ms-transition-property: opacity;
+        -o-transition-property: opacity;
+        transition-property: opacity;
+        -webkit-transition-duration: 1s;
+        -moz-transition-duration: 1s;
+        -ms-transition-duration: 1s;
+        -o-transition-duration: 1s;
+        transition-duration: 1s
+    }
+
+    .section-title h3, .bubble h3 {
+        font-size: 3em;
+        line-height: 0.804em;
+        margin: 0;
+        font-weight: 200; 
+    }
+
+    @media all and (min-width: 800px) {
+        .section-title h3, .bubble h3 {
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    @media all and (max-width: 800px) {
+        .bubbleNav {
             display: block;
             margin: 0 10%;
             padding-top: 1.5em
         }
-        .section-title {
+        .section-title, .bubble {
             width: 100%;
             margin: 0;
             padding: 0;
@@ -138,42 +150,25 @@
             -o-border-radius: 10px;
             border-radius: 10px
         }
-        .section-title h3 {
+        .section-title h3, .bubble h3 {
             font-size: 2em;
-            padding: 0.5em 0 0.3em
+            padding: 0.5em 0 0.5em; 
+            height: initial;
         }
     }
 
-/* Button Section */
+    /* Opacities */
+        .section-title:hover, .bubble:hover {
+            opacity: 0.8; 
+        }
 
-    .heat-stress {
-        background: #df815a;
-        margin-left: 0
-    }
+        .bubbleNav a.section-title, .bubble.section-title {
+            opacity: 0.5; 
+        }
 
-    .uv-radiation {
-        background: #e7ca52
-    }
-
-    .uv-radiation.active-title::after {
-        display: block
-    }
-
-    .pollens {
-        background: #7dbf94
-    }
-
-    .pollens h3 {
-        padding-top: 1.6em
-    }
-
-    .non-active-title {
-        opacity: 0.6
-    }
-
-    .air-pollution {
-        background: #639bb4
-    }
+        .bubbleNav a.active-title {
+            opacity: 1; 
+        }
 
 /* Pages Section */
 
@@ -223,76 +218,138 @@
 
 /* Sponsors Section */
 
+/* Theme Elements */
+    /*.Background colours */
+        .red {
+            background: #E06D6F;
+            margin-left: 0; 
+        }
+        .blue {
+            background: #80B1F5;
+        }
+        .green {
+            background: #94D3A3;
+        }
+        .yellow {
+            background: #F1C37F;
+        }
+
+    /* Text colours */
+        .red > b, 
+        .red > strong {
+            color: #E06D6F;
+        }
+
+        .blue > b, 
+        .blue > strong {
+            color: #80B1F5;
+        }
+
+        .green > b, 
+        .green > strong {
+            color: #94D3A3;
+        }
+
+        .yellow > b, 
+        .yellow > strong {
+            color: #F1C37F;
+        }
+
 /* Main Elements - to be refactored */
-    article,
-    aside,
-    details,
-    figcaption,
-    figure,
-    footer,
-    header,
-    hgroup,
-    nav,
-    section,
-    summary {
-        display: block
-    }
 
-    audio,
-    canvas,
-    video {
-        display: inline-block
-    }
+    /* Fonts */
+        h1 {
+            font-size: 2em;
+        }
 
-    audio:not([controls]) {
-        display: none;
-        height: 0
-    }
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "OstrichSans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-weight: normal
+        }
+
+        h4 {
+            color: #464646;
+            font-family: "OstrichSans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 3.375em;
+            text-align: center;
+            margin-top: 0.2em
+        }
+
+        p,
+        header h2,
+        .inhaler-section ul {
+            font-family: "Libre Baskerville", serif;
+            font-weight: 400;
+            font-size: 1.125em;
+            line-height: 1.875em;
+            color: #464646;
+            -webkit-font-smoothing: antialiased
+        }
+
+        .body-font {
+            font-family: "Libre Baskerville", serif;
+            font-weight: 400
+        }
+
+        @font-face {
+            font-family: 'OstrichSans';
+            src: url("../fonts/ostrich-regular-webfont.eot");
+            src: url("../fonts/ostrich-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/ostrich-regular-webfont.woff") format("woff"), url("../fonts/ostrich-regular-webfont.ttf") format("truetype"), url("../fonts/ostrich-regular-webfont.svg#OstrichSans") format("svg");
+            font-weight: normal;
+            font-style: normal
+        }
+
+        @font-face {
+            font-family: 'OstrichSansLight';
+            src: url("../fonts/ostrich-light-webfont.eot");
+            src: url("../fonts/ostrich-light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/ostrich-light-webfont.woff") format("woff"), url("../fonts/ostrich-light-webfont.ttf") format("truetype"), url("../fonts/ostrich-light-webfont.svg#OstrichSansLight") format("svg");
+            font-weight: normal;
+            font-style: normal
+        }
+
+    /* Text Styles */
+        b,
+        strong {
+            font-weight: bold
+        }
+
+        strong {
+            font-weight: 700
+        }
+
+    /* Links */
+
+        a {
+            color: #464646;
+            cursor: pointer;
+            -webkit-transition: all 0.6s ease;
+            -moz-transition: all 0.6s ease;
+            -ms-transition: all 0.6s ease;
+            -o-transition: all 0.6s ease;
+            transition: all 0.6s ease
+        }
+
+        a:focus {
+            outline: thin dotted
+        }
+
+        a:active,
+        a:hover {
+            outline: 0
+        }
 
     [hidden] {
         display: none
     }
 
-    html {
-        font-family: sans-serif;
-        -webkit-text-size-adjust: 100%;
-        -ms-text-size-adjust: 100%
-    }
-
     body {
         margin: 0;
         overflow-x: hidden;
-    }
-
-    a:focus {
-        outline: thin dotted
-    }
-
-    a:active,
-    a:hover {
-        outline: 0
-    }
-
-    h1 {
-        font-size: 2em
-    }
-
-    abbr[title] {
-        border-bottom: 1px dotted
-    }
-
-    b,
-    strong {
-        font-weight: bold
-    }
-
-    dfn {
-        font-style: italic
-    }
-
-    mark {
-        background: #ff0;
-        color: #000
     }
 
     code,
@@ -356,102 +413,66 @@
         padding: 0
     }
 
-    button,
-    input,
-    select,
-    textarea {
-        font-family: inherit;
-        font-size: 100%;
-        margin: 0
-    }
+    /* Forms */
+        button,
+        input,
+        select,
+        textarea {
+            font-family: inherit;
+            font-size: 100%;
+            margin: 0
+        }
 
-    button,
-    input {
-        line-height: normal
-    }
+        button,
+        input {
+            line-height: normal
+        }
 
-    button,
-    html input[type="button"],
-    input[type="reset"],
-    input[type="submit"] {
-        -webkit-appearance: button;
-        cursor: pointer
-    }
+        button,
+        html input[type="button"],
+        input[type="reset"],
+        input[type="submit"] {
+            -webkit-appearance: button;
+            cursor: pointer
+        }
 
-    button[disabled],
-    input[disabled] {
-        cursor: default
-    }
+        button[disabled],
+        input[disabled] {
+            cursor: default
+        }
 
-    input[type="checkbox"],
-    input[type="radio"] {
-        box-sizing: border-box;
-        padding: 0
-    }
+        input[type="checkbox"],
+        input[type="radio"] {
+            box-sizing: border-box;
+            padding: 0
+        }
 
-    input[type="search"] {
-        -webkit-appearance: textfield;
-        -moz-box-sizing: content-box;
-        -webkit-box-sizing: content-box;
-        box-sizing: content-box
-    }
+        input[type="search"] {
+            -webkit-appearance: textfield;
+            -moz-box-sizing: content-box;
+            -webkit-box-sizing: content-box;
+            box-sizing: content-box
+        }
 
-    input[type="search"]::-webkit-search-cancel-button,
-    input[type="search"]::-webkit-search-decoration {
-        -webkit-appearance: none
-    }
+        input[type="search"]::-webkit-search-cancel-button,
+        input[type="search"]::-webkit-search-decoration {
+            -webkit-appearance: none
+        }
 
-    button::-moz-focus-inner,
-    input::-moz-focus-inner {
-        border: 0;
-        padding: 0
-    }
+        button::-moz-focus-inner,
+        input::-moz-focus-inner {
+            border: 0;
+            padding: 0
+        }
 
-    textarea {
-        overflow: auto;
-        vertical-align: top
-    }
+        textarea {
+            overflow: auto;
+            vertical-align: top
+        }
 
     table {
         border-collapse: collapse;
         border-spacing: 0
-    }
-
-    .heading-font,
-    .thermometer-caption,
-    .slider-caption,
-    .threshold-caption,
-    .skin-cancer-figures,
-    .skin-cancer-caption span,
-    .suncream-shelf .shelf-help-label p,
-    .suncream-shelf .shelf-help-label header h2,
-    header .suncream-shelf .shelf-help-label h2,
-    .suncream-shelf .shelf-help-label .inhaler-section ul,
-    .inhaler-section .suncream-shelf .shelf-help-label ul,
-    .south-pole-label span {
-        font-family: "OstrichSans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-        font-weight: normal
-    }
-
-    .body-font {
-        font-family: "Libre Baskerville", serif;
-        font-weight: 400
-    }
-
-    @font-face {
-        font-family: 'OstrichSans';
-        src: url("../fonts/ostrich-regular-webfont.eot");
-        src: url("../fonts/ostrich-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/ostrich-regular-webfont.woff") format("woff"), url("../fonts/ostrich-regular-webfont.ttf") format("truetype"), url("../fonts/ostrich-regular-webfont.svg#OstrichSans") format("svg");
-        font-weight: normal;
-        font-style: normal
-    }
-
-    @font-face {
-        font-family: 'OstrichSansLight';
-        src: url("../fonts/ostrich-light-webfont.eot");
-        src: url("../fonts/ostrich-light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/ostrich-light-webfont.woff") format("woff"), url("../fonts/ostrich-light-webfont.ttf") format("truetype"), url("../fonts/ostrich-light-webfont.svg#OstrichSansLight") format("svg");
-        font-weight: normal;
-        font-style: normal
     }
 
     .clearfix:before,
@@ -468,72 +489,33 @@
         *zoom: 1
     }
 
-    .ss-share {
-        padding-left: 0;
-        padding-bottom: 2em;
-        list-style: none;
-        text-align: center
-    }
-
-    .ss-share-item {
-        display: inline;
-        margin-right: 1em
-    }
-
-    .ss-share-item:nth-child(4) {
-        margin-right: 0
-    }
-
-    .ss-share-link {
-        text-decoration: none;
-        color: #444;
-        font-weight: bold;
-        padding: 0.5em 0.75em 0.5em 35px;
-        background-color: #FFFFFF;
-        border: 1px solid #fefefe;
-        border-radius: 4px
-    }
-
-    .ss-share-link:hover,
-    .ss-share-link:active,
-    .ss-share-link:focus {
-        background-color: #FCFCFC;
-        border-color: #FFFFFF
-    }
-
-    [class*="ico-"] {
-        display: inline-block;
-        background-size: 16px 16px;
-        background-repeat: no-repeat;
-        background-position: 10px center
-    }
-
-    .ico-facebook {
-        background-image: url("http://www.facebook.com/favicon.ico")
-    }
-
-    .ico-twitter {
-        background-image: url("http://twitter.com/favicons/favicon.ico")
-    }
-
-    .ico-google {
-        background-image: url("https://ssl.gstatic.com/s2/oz/images/faviconr2.ico")
-    }
-
-    .ico-pinterest {
-        background-image: url("http://pinterest.com/favicon.ico")
-    }
-
-    @media all and (max-width: 767px) {
-        .ss-share-item {
-            display: block;
-            margin: 1em 0
+    /* Icons */
+        [class*="ico-"] {
+            display: inline-block;
+            background-size: 16px 16px;
+            background-repeat: no-repeat;
+            background-position: 10px center
         }
-    }
+
+        .ico-facebook {
+            background-image: url("http://www.facebook.com/favicon.ico")
+        }
+
+        .ico-twitter {
+            background-image: url("http://twitter.com/favicons/favicon.ico")
+        }
+
+        .ico-google {
+            background-image: url("https://ssl.gstatic.com/s2/oz/images/faviconr2.ico")
+        }
+
+        .ico-pinterest {
+            background-image: url("http://pinterest.com/favicon.ico")
+        }
 
     @media all and (max-width: 767px) {
         .ozone {
-            background-attachment: none
+            /*background-attachment: none*/
         }
     }
 
@@ -547,53 +529,6 @@
 
     em {
         font-weight: 400
-    }
-
-    strong {
-        font-weight: 700
-    }
-
-    h1 {
-        font-family: "OstrichSans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-        font-weight: normal
-    }
-
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        font-family: "OstrichSans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-        font-weight: normal
-    }
-
-    h4 {
-        color: #464646;
-        font-family: "OstrichSans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-        font-size: 3.375em;
-        text-align: center;
-        margin-top: 0.2em
-    }
-
-    p,
-    header h2,
-    .inhaler-section ul {
-        font-family: "Libre Baskerville", serif;
-        font-weight: 400;
-        font-size: 1.125em;
-        line-height: 1.875em;
-        color: #464646;
-        -webkit-font-smoothing: antialiased
-    }
-
-    a {
-        color: #464646;
-        cursor: pointer;
-        -webkit-transition: all 0.6s ease;
-        -moz-transition: all 0.6s ease;
-        -ms-transition: all 0.6s ease;
-        -o-transition: all 0.6s ease;
-        transition: all 0.6s ease
     }
 
     .no-touch a:hover {
@@ -611,94 +546,91 @@
         transform: translate3d(0, 0, 0)
     }
 
-    .preload {
-        display: none
-    }
+    /* Loading */
 
-    .loading {
-        width: 100%;
-        text-align: center;
-        padding-top: 2em
-    }
+        .preload {
+            display: none
+        }
 
-    .loading p,
-    .loading header h2,
-    header .loading h2,
-    .loading .inhaler-section ul,
-    .inhaler-section .loading ul {
-        font-style: italic;
-        -webkit-transition: color 1s;
-        -moz-transition: color 1s;
-        -ms-transition: color 1s;
-        -o-transition: color 1s;
-        transition: color 1s;
-        -webkit-animation: loading 3s infinite;
-        -moz-animation: loading 3s infinite;
-        animation: loading 3s infinite
-    }
+        .loading {
+            width: 100%;
+            text-align: center;
+            padding-top: 2em
+        }
 
-    @-webkit-keyframes loading {
-        0% {
-            color: #464646
+        .loading p,
+        .loading header h2,
+        header .loading h2,
+        .loading .inhaler-section ul,
+        .inhaler-section .loading ul {
+            font-style: italic;
+            -webkit-transition: color 1s;
+            -moz-transition: color 1s;
+            -ms-transition: color 1s;
+            -o-transition: color 1s;
+            transition: color 1s;
+            -webkit-animation: loading 3s infinite;
+            -moz-animation: loading 3s infinite;
+            animation: loading 3s infinite
         }
-        50% {
-            color: #639bb4
-        }
-        100% {
-            color: #464646
-        }
-    }
 
-    @-moz-keyframes loading {
-        0% {
-            color: #464646
+        @-webkit-keyframes loading {
+            0% {
+                color: #464646
+            }
+            50% {
+                color: #639bb4
+            }
+            100% {
+                color: #464646
+            }
         }
-        50% {
-            color: #639bb4
-        }
-        100% {
-            color: #464646
-        }
-    }
 
-    @-ms-keyframes loading {
-        0% {
-            color: #464646
+        @-moz-keyframes loading {
+            0% {
+                color: #464646
+            }
+            50% {
+                color: #639bb4
+            }
+            100% {
+                color: #464646
+            }
         }
-        50% {
-            color: #639bb4
-        }
-        100% {
-            color: #464646
-        }
-    }
 
-    @-o-keyframes loading {
-        0% {
-            color: #464646
+        @-ms-keyframes loading {
+            0% {
+                color: #464646
+            }
+            50% {
+                color: #639bb4
+            }
+            100% {
+                color: #464646
+            }
         }
-        50% {
-            color: #639bb4
-        }
-        100% {
-            color: #464646
-        }
-    }
 
-    @keyframes loading {
-        0% {
-            color: #464646
+        @-o-keyframes loading {
+            0% {
+                color: #464646
+            }
+            50% {
+                color: #639bb4
+            }
+            100% {
+                color: #464646
+            }
         }
-        50% {
-            color: #639bb4
-        }
-        100% {
-            color: #464646
-        }
-    }
 
-    header {
-        width: 90%;
-        margin: 3em auto 0;
-        text-align: center
-    }
+        @keyframes loading {
+            0% {
+                color: #464646
+            }
+            50% {
+                color: #639bb4
+            }
+            100% {
+                color: #464646
+            }
+        }
+

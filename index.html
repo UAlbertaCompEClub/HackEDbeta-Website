@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <!-- saved from url=(0026)http://undertheweather.eu/ -->
-<html lang="en-GB" style="" class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths">
-
+<html lang="en-GB" style="" class="">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
@@ -19,6 +18,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
     <script src="js/main.js" type="text/javascript"></script>
+    <script src="js/undertheweather.js" type="text/javascript"></script>
 
     <!--[if lt IE 9]><link rel="stylesheet" href="css/ie.css"><![endif]-->
     <!--[if IE 9]><link rel="stylesheet" href="css/ie9.css"><![endif]-->
@@ -69,7 +69,6 @@
                 </h2>
             </hgroup>
         </header>
-
     </div>
 
 
@@ -82,27 +81,19 @@
 
         <div class="container">
 
-            <nav class="section-title-container heat-stress-section clearfix">
+            <nav class="bubbleNav clearfix">
 
-                <a onclick="slideChange(1)" class="heat-stress-button" style="opacity: 1;">
-                    <div class="section-title heat-stress active-title">
-                        <h3>Register Now</h3>
-                    </div>
+                <a onclick="slideChange(1)" class="section-title red active-title">
+                    <h3>Register Now</h3>
                 </a>
-                <a onclick="slideChange(2)" class="uv-radiation-button" style="opacity: 1;">
-                    <div class="section-title uv-radiation non-active-title">
-                        <h3>Enter + Mentor</h3>
-                    </div>
+                <a onclick="slideChange(2)" class="section-title blue">
+                    <h3>Enter + Mentor</h3>
                 </a>
-                <a onclick="slideChange(3)" class="pollens-button" style="opacity: 1;">
-                    <div class="section-title pollens non-active-title">
-                        <h3>Be a Mentor</h3>
-                    </div>
+                <a onclick="slideChange(3)" class="section-title green">
+                    <h3>Be a Mentor</h3>
                 </a>
-                <a onclick="slideChange(4)" class="air-pollution-button" style="opacity: 1;">
-                    <div class="section-title air-pollution non-active-title">
-                        <h3>Sponsor Us</h3>
-                    </div>
+                <a onclick="slideChange(4)" class="section-title yellow">
+                    <h3>Sponsor Us</h3>
                 </a>
             </nav>
 
@@ -112,12 +103,12 @@
 
     <div class="pagesContainer">
         <div class="widePagesContainer">
-            <div class="page" id="one">
-                Hackathons are for designing, creating and building awesome projects. <bold>HackEDbeta is an open and welcoming event that provides a great learning environment for students of all backgrounds.</bold> Whether or not you have programmed before does not matter! We want you here despite your level of experience!
+            <div class="page red" id="one">
+                Hackathons are for designing, creating and building awesome projects. <b>HackEDbeta is an open and welcoming event that provides a great learning environment for students of all backgrounds.</b> Whether or not you have programmed before does not matter! We want you here despite your level of experience!
                 <br><br>
-                <bold>Mentors</bold> from graduate school and industry are available to help students along with their projects. 
+                <b>Mentors</b> from graduate school and industry are available to help students along with their projects. 
                 <br><br>
-                Worried about being in a competition? Don’t be! The <bold>competition aspect is optional</bold> - if you wish to opt out of presenting your project at the end, you can. This hackathon is all about learning something new and the environment will be extremely laid back. 
+                Worried about being in a competition? Don’t be! The <b>competition aspect is optional</b> - if you wish to opt out of presenting your project at the end, you can. This hackathon is all about learning something new and the environment will be extremely laid back. 
             </div>
             <div class="page" id="two">
                 <h1>Where does it come from?</h1>

@@ -12,7 +12,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 
 function slideChange(reqSlide) {
-    //when slide changes, animate the slide to the side
+    // when slide changes, animate the slide to the side
+
     var moveStr = "-" + String(reqSlide - 1) + "00vw";
     
     console.log("reqSlide: " + reqSlide);
@@ -23,6 +24,30 @@ function slideChange(reqSlide) {
     
     //set slide's new state
     slide = reqSlide;
+
+    // Adjust active/inactive 
+    if (reqSlide == 1) {
+        $(".section-title:first-child").css("opacity", "1"); 
+        $(".section-title:nth-child(2)").css("opacity", "0.4"); 
+        $(".section-title:nth-child(3)").css("opacity", "0.4"); 
+        $(".section-title:nth-child(4)").css("opacity", "0.4"); 
+    } else if (reqSlide == 2) {
+        $(".section-title:first-child").css("opacity", "0.4"); 
+        $(".section-title:nth-child(2)").css("opacity", "1"); 
+        $(".section-title:nth-child(3)").css("opacity", "0.4"); 
+        $(".section-title:nth-child(4)").css("opacity", "0.4"); 
+    } else if (reqSlide == 3) {
+        $(".section-title:first-child").css("opacity", "0.4"); 
+        $(".section-title:nth-child(2)").css("opacity", "0.4"); 
+        $(".section-title:nth-child(3)").css("opacity", "1"); 
+        $(".section-title:nth-child(4)").css("opacity", "0.4"); 
+    } else if (reqSlide == 4) {
+        $(".section-title:first-child").css("opacity", "0.4"); 
+        $(".section-title:nth-child(2)").css("opacity", "0.4"); 
+        $(".section-title:nth-child(3)").css("opacity", "0.4"); 
+        $(".section-title:nth-child(4)").css("opacity", "1"); 
+    }
+
 }
 
 function startCursorBlinking() {
@@ -47,3 +72,5 @@ Background Colours:
 #16703D DARKGREEN
     
 */
+
+
