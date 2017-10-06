@@ -15,6 +15,15 @@
         margin: 0.3em 0 -0.1em 0
     }
 
+    @media all and (max-width: 767px) {
+        header {
+            width: 100%
+        }
+        header h1 {
+            font-size: 4em
+        }
+    }
+
     header h2 {
         font-style: italic;
         padding: 0 10%;
@@ -33,11 +42,6 @@
         display: block;
         border: 1px solid;
         border-style: inset;
-    }
-
-    .bubbleNav {
-        display: table;
-        margin: 0 auto;
     }
 
     .prompt {
@@ -60,32 +64,6 @@
     .cursor {
         font-size: 5em;
         font-weight: 900;
-    }
-
-    @media all and (max-width: 767px) {
-        * {
-            /*float: none !important*/
-        }
-        .section-heading:before,
-        .section-heading:after {
-            content: "";
-            width: 60%;
-            margin: 0.5em 20%;
-            height: 0px;
-            display: block;
-            border: 1px solid;
-            border-style: inset
-        }
-        .container {
-            width: 98%;
-            padding: 0 1%
-        }
-        header {
-            width: 100%
-        }
-        header h1 {
-            font-size: 4em
-        }
     }
 
 /* Button Section */
@@ -155,6 +133,11 @@
             padding: 0.5em 0 0.5em; 
             height: initial;
         }
+    }
+
+    .bubbleNav {
+        display: table;
+        margin: 0 auto;
     }
 
     /* Opacities */
