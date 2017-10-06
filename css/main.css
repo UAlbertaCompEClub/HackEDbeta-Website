@@ -4,7 +4,7 @@
 
     header {
         width: 90%;
-        margin: 3em auto 0;
+        margin: 25vh auto 20vh;
         text-align: center
     }
 
@@ -124,7 +124,7 @@
         font-weight: 200; 
     }
 
-    @media all and (min-width: 800px) {
+    @media all and (min-width: 1001px) {
         .section-title h3, .bubble h3 {
             position: relative;
             top: 50%;
@@ -132,7 +132,7 @@
         }
     }
 
-    @media all and (max-width: 800px) {
+    @media all and (max-width: 1000px) {
         .bubbleNav {
             display: block;
             margin: 0 10%;
@@ -159,11 +159,11 @@
 
     /* Opacities */
         .section-title:hover, .bubble:hover {
-            opacity: 0.8; 
+            opacity: 0.8 !important; 
         }
 
         .bubbleNav a.section-title, .bubble.section-title {
-            opacity: 0.5; 
+            opacity: 0.4; 
         }
 
         .bubbleNav a.active-title {
@@ -195,23 +195,13 @@
         height: 100%;
         margin: 0px;
         overflow-x: scroll;
-        padding: 2em 15em 2em 15em;
+        padding: 2em 15vw 2em 15vw;
     }
 
-    #one {
-        background-color: transparent;
-    }
-
-    #two {
-        background-color: transparent;
-    }
-
-    #three {
-        background-color: transparent;
-    }
-
-    #four {
-        background-color: transparent;
+    @media all and (max-width: 1001px) {
+        .pagesContainer .widePagesContainer .page {
+            padding: 2em 10vw 2em 10vw;
+        }
     }
 
 /* FAQ Section */
@@ -219,39 +209,39 @@
 /* Sponsors Section */
 
 /* Theme Elements */
+
     /*.Background colours */
-        .red {
+        .redback {
             background: #E06D6F;
-            margin-left: 0; 
         }
-        .blue {
+        .blueback {
             background: #80B1F5;
         }
-        .green {
+        .greenback {
             background: #94D3A3;
         }
-        .yellow {
+        .yellowback {
             background: #F1C37F;
         }
 
     /* Text colours */
-        .red > b, 
-        .red > strong {
+        .red b, .red strong, 
+        .content .red h1, .content .red h2, .content .red h3, .content .red h4 {
             color: #E06D6F;
         }
 
-        .blue > b, 
-        .blue > strong {
+        .blue b, .blue strong, 
+        .content .blue h1, .content .blue h2, .content .blue h3, .content .blue h4 {
             color: #80B1F5;
         }
 
-        .green > b, 
-        .green > strong {
+        .green b, .green strong, 
+        .content .green h1, .content .green h2, .content .green h3, .content .green h4 {
             color: #94D3A3;
         }
 
-        .yellow > b, 
-        .yellow > strong {
+        .yellow b, .yellow strong, 
+        .content .yellow h1, .content .yellow h2, .content .yellow h3, .content .yellow h4 {
             color: #F1C37F;
         }
 
@@ -343,209 +333,6 @@
             outline: 0
         }
 
-    [hidden] {
-        display: none
-    }
-
-    body {
-        margin: 0;
-        overflow-x: hidden;
-    }
-
-    code,
-    kbd,
-    pre,
-    samp {
-        font-family: monospace, serif;
-        font-size: 1em
-    }
-
-    pre {
-        white-space: pre;
-        white-space: pre-wrap;
-        word-wrap: break-word
-    }
-
-    q {
-        quotes: "\201C" "\201D" "\2018" "\2019"
-    }
-
-    small {
-        font-size: 80%
-    }
-
-    sub,
-    sup {
-        font-size: 75%;
-        line-height: 0;
-        position: relative;
-        vertical-align: baseline
-    }
-
-    sup {
-        top: -0.5em
-    }
-
-    sub {
-        bottom: -0.25em
-    }
-
-    img {
-        border: 0
-    }
-
-    svg:not(:root) {
-        overflow: hidden
-    }
-
-    figure {
-        margin: 0
-    }
-
-    fieldset {
-        border: 1px solid silver;
-        margin: 0 2px;
-        padding: 0.35em 0.625em 0.75em
-    }
-
-    legend {
-        border: 0;
-        padding: 0
-    }
-
-    /* Forms */
-        button,
-        input,
-        select,
-        textarea {
-            font-family: inherit;
-            font-size: 100%;
-            margin: 0
-        }
-
-        button,
-        input {
-            line-height: normal
-        }
-
-        button,
-        html input[type="button"],
-        input[type="reset"],
-        input[type="submit"] {
-            -webkit-appearance: button;
-            cursor: pointer
-        }
-
-        button[disabled],
-        input[disabled] {
-            cursor: default
-        }
-
-        input[type="checkbox"],
-        input[type="radio"] {
-            box-sizing: border-box;
-            padding: 0
-        }
-
-        input[type="search"] {
-            -webkit-appearance: textfield;
-            -moz-box-sizing: content-box;
-            -webkit-box-sizing: content-box;
-            box-sizing: content-box
-        }
-
-        input[type="search"]::-webkit-search-cancel-button,
-        input[type="search"]::-webkit-search-decoration {
-            -webkit-appearance: none
-        }
-
-        button::-moz-focus-inner,
-        input::-moz-focus-inner {
-            border: 0;
-            padding: 0
-        }
-
-        textarea {
-            overflow: auto;
-            vertical-align: top
-        }
-
-    table {
-        border-collapse: collapse;
-        border-spacing: 0
-    }
-
-    .clearfix:before,
-    .clearfix:after {
-        content: " ";
-        display: table
-    }
-
-    .clearfix:after {
-        clear: both
-    }
-
-    .clearfix {
-        *zoom: 1
-    }
-
-    /* Icons */
-        [class*="ico-"] {
-            display: inline-block;
-            background-size: 16px 16px;
-            background-repeat: no-repeat;
-            background-position: 10px center
-        }
-
-        .ico-facebook {
-            background-image: url("http://www.facebook.com/favicon.ico")
-        }
-
-        .ico-twitter {
-            background-image: url("http://twitter.com/favicons/favicon.ico")
-        }
-
-        .ico-google {
-            background-image: url("https://ssl.gstatic.com/s2/oz/images/faviconr2.ico")
-        }
-
-        .ico-pinterest {
-            background-image: url("http://pinterest.com/favicon.ico")
-        }
-
-    @media all and (max-width: 767px) {
-        .ozone {
-            /*background-attachment: none*/
-        }
-    }
-
-    body {
-        background: #e0e0e0;
-        font-size: 100%;
-        font-family: "Libre Baskerville", serif;
-        font-weight: 400;
-        overflow-x: hidden;
-    }
-
-    em {
-        font-weight: 400
-    }
-
-    .no-touch a:hover {
-        color: #639bb4
-    }
-
-    .container {
-        width: 1000px;
-        margin: 0 auto;
-        padding: 0 20px;
-        -webkit-transform: translate3d(0, 0, 0);
-        -moz-transform: translate3d(0, 0, 0);
-        -ms-transform: translate3d(0, 0, 0);
-        -o-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0)
-    }
-
     /* Loading */
 
         .preload {
@@ -634,3 +421,206 @@
             }
         }
 
+    /* mess */
+        [hidden] {
+            display: none
+        }
+
+        body {
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        code,
+        kbd,
+        pre,
+        samp {
+            font-family: monospace, serif;
+            font-size: 1em
+        }
+
+        pre {
+            white-space: pre;
+            white-space: pre-wrap;
+            word-wrap: break-word
+        }
+
+        q {
+            quotes: "\201C" "\201D" "\2018" "\2019"
+        }
+
+        small {
+            font-size: 80%
+        }
+
+        sub,
+        sup {
+            font-size: 75%;
+            line-height: 0;
+            position: relative;
+            vertical-align: baseline
+        }
+
+        sup {
+            top: -0.5em
+        }
+
+        sub {
+            bottom: -0.25em
+        }
+
+        img {
+            border: 0
+        }
+
+        svg:not(:root) {
+            overflow: hidden
+        }
+
+        figure {
+            margin: 0
+        }
+
+        fieldset {
+            border: 1px solid silver;
+            margin: 0 2px;
+            padding: 0.35em 0.625em 0.75em
+        }
+
+        legend {
+            border: 0;
+            padding: 0
+        }
+
+        /* Forms */
+            button,
+            input,
+            select,
+            textarea {
+                font-family: inherit;
+                font-size: 100%;
+                margin: 0
+            }
+
+            button,
+            input {
+                line-height: normal
+            }
+
+            button,
+            html input[type="button"],
+            input[type="reset"],
+            input[type="submit"] {
+                -webkit-appearance: button;
+                cursor: pointer
+            }
+
+            button[disabled],
+            input[disabled] {
+                cursor: default
+            }
+
+            input[type="checkbox"],
+            input[type="radio"] {
+                box-sizing: border-box;
+                padding: 0
+            }
+
+            input[type="search"] {
+                -webkit-appearance: textfield;
+                -moz-box-sizing: content-box;
+                -webkit-box-sizing: content-box;
+                box-sizing: content-box
+            }
+
+            input[type="search"]::-webkit-search-cancel-button,
+            input[type="search"]::-webkit-search-decoration {
+                -webkit-appearance: none
+            }
+
+            button::-moz-focus-inner,
+            input::-moz-focus-inner {
+                border: 0;
+                padding: 0
+            }
+
+            textarea {
+                overflow: auto;
+                vertical-align: top
+            }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0
+        }
+
+        .clearfix:before,
+        .clearfix:after {
+            content: " ";
+            display: table
+        }
+
+        .clearfix:after {
+            clear: both
+        }
+
+        .clearfix {
+            *zoom: 1
+        }
+
+        /* Icons */
+            [class*="ico-"] {
+                display: inline-block;
+                background-size: 16px 16px;
+                background-repeat: no-repeat;
+                background-position: 10px center
+            }
+
+            .ico-facebook {
+                background-image: url("http://www.facebook.com/favicon.ico")
+            }
+
+            .ico-twitter {
+                background-image: url("http://twitter.com/favicons/favicon.ico")
+            }
+
+            .ico-google {
+                background-image: url("https://ssl.gstatic.com/s2/oz/images/faviconr2.ico")
+            }
+
+            .ico-pinterest {
+                background-image: url("http://pinterest.com/favicon.ico")
+            }
+
+        @media all and (max-width: 767px) {
+            .ozone {
+                /*background-attachment: none*/
+            }
+        }
+
+        body {
+            background: #e0e0e0;
+            font-size: 100%;
+            font-family: "Libre Baskerville", serif;
+            font-weight: 400;
+            overflow-x: hidden;
+        }
+
+        em {
+            font-weight: 400
+        }
+
+        .no-touch a:hover {
+            color: #639bb4
+        }
+
+        .container {
+            width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+            -webkit-transform: translate3d(0, 0, 0);
+            -moz-transform: translate3d(0, 0, 0);
+            -ms-transform: translate3d(0, 0, 0);
+            -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0)
+        }
