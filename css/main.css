@@ -194,16 +194,16 @@
 /* Theme Elements */
 
     /*.Background colours */
-        .redback {
+        .redback, .red button {
             background: #E06D6F;
         }
-        .blueback {
+        .blueback, .blue button {
             background: #80B1F5;
         }
-        .greenback {
+        .greenback, .green button {
             background: #94D3A3;
         }
-        .yellowback {
+        .yellowback, .yellow button {
             background: #F1C37F;
         }
 
