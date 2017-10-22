@@ -330,20 +330,27 @@ header {
     h1 {
         margin-bottom: 2.5rem;
     }
+    .sponsor_tier {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0em;
+    }
     .sponsor {
-        margin: 10px;
-        display: inline;
+        flex-grow: 1;
+        margin: 2em;
         img {
-            width: auto;
-            height: auto;
+            max-width: 100%;
+            max-height: 100%;
         }
-        &.gold img {
-            max-width: 30%;
+        &.gold {
+            max-width: 25%;
         }
-        &.silver img {
-            max-width: 22%;
+        &.silver {
+            max-width: 15%;
         }
-        &.bronze img {
+        &.bronze {
             max-width: 15%;
         }
     }
@@ -475,6 +482,25 @@ footer {
 
             > * {
                 margin-left: 0%;
+            }
+        }
+    }
+
+    .sponsors {
+        margin: 0 0;
+        .sponsor_tier {
+            margin-bottom: 2em;
+        }
+        .sponsor {
+            margin: 1em;
+            &.gold {
+                max-width: 38%;
+            }
+            &.silver {
+                max-width: 22%;
+            }
+            &.bronze {
+                max-width: 15%;
             }
         }
     }
