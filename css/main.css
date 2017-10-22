@@ -238,7 +238,6 @@ header {
 
 .sponsors {
   text-align: center;
-  padding-bottom: 3em;
   margin: 0 15%; }
   .sponsors h1 {
     margin-bottom: 2.5rem; }
@@ -276,7 +275,7 @@ footer {
   padding: 5em 10em 3em 10em;
   width: 100%;
   margin: 0 0 0em -2em;
-  background-color: #efefef; }
+  background-color: #F1F1F1; }
   footer a {
     color: #E06D6F; }
   footer > section {
