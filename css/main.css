@@ -256,10 +256,13 @@ header {
       max-width: 100%;
       max-height: 100%; }
     .sponsors .sponsor.gold {
+      flex-basis: 25%;
       max-width: 25%; }
     .sponsors .sponsor.silver {
+      flex-basis: 15%;
       max-width: 15%; }
     .sponsors .sponsor.bronze {
+      flex-basis: 15%;
       max-width: 15%; }
 
 footer {
@@ -351,10 +354,13 @@ footer {
     .sponsors .sponsor {
       margin: 1em; }
       .sponsors .sponsor.gold {
+        flex-basis: 38%;
         max-width: 38%; }
       .sponsors .sponsor.silver {
+        flex-basis: 22%;
         max-width: 22%; }
       .sponsors .sponsor.bronze {
+        flex-basis: 15%;
         max-width: 15%; } }
 
 /*# sourceMappingURL=main.css.map */
