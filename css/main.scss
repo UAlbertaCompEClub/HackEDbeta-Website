@@ -462,4 +462,14 @@ footer {
             }
         }
     }
+
+    .faq {
+        .question-section {
+            width: 100%;
+
+            > * {
+                margin-left: 0%;
+            }
+        }
+    }
 }
