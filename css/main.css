@@ -201,7 +201,8 @@ header {
 .faq {
   background-color: #E06D6F;
   padding-top: 7vh;
-  margin-bottom: 13vh; }
+  margin-bottom: 13vh;
+  color: #FFFFFF; }
   .faq h1 {
     text-align: center;
     margin-bottom: 2.5rem; }
@@ -216,10 +217,11 @@ header {
       display: inline-block;
       margin: 0;
       padding: 3px 9px;
-      color: #434b53;
+      color: #FFFFFF;
       cursor: pointer; }
       .faq .question-section .question:hover, .faq .question-section .question.active {
         background-color: #e6e6e6;
+        border-radius: 4px;
         color: #212529; }
     .faq .question-section .answer {
       margin: 0;

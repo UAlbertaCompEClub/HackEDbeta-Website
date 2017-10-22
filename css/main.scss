@@ -274,6 +274,7 @@ header {
     background-color: $color-red;
     padding-top: 7vh;
     margin-bottom: 13vh;
+    color: $color-white;
     //"FAQ" title
     h1 {
         text-align: center;
@@ -299,10 +300,11 @@ header {
             display: inline-block;
             margin: 0;
             padding: 3px 9px;
-            color: lighten($color-text, 15%);
+            color: $color-white;
             cursor: pointer;
             &:hover, &.active {
                 background-color: #e6e6e6;
+                border-radius: 4px;
                 color: $color-text;
             }
         }
