@@ -217,7 +217,7 @@ header {
     width: 100vw;  //this is one screen width's wide
     min-height: 500px;
     margin-top: 10px;
-    margin-bottom: 13vh;
+    margin-bottom: 5vh;
     margin-left: 0;
     position: relative;  //only relatively positioned elements will work with overflow / overflow-x: hidden
     top: 0;
@@ -463,6 +463,10 @@ footer {
                 line-height: 1em;
             }
         }
+    }
+
+    .pages-container {
+        margin-bottom: 0vh;
     }
 
     .faq {
