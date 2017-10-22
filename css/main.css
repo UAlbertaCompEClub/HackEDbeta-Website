@@ -73,7 +73,7 @@ button {
 
 header {
   width: 90%;
-  margin: 25vh auto 20vh auto;
+  margin: 25vh auto 0vh auto;
   text-align: center; }
   header h1 {
     font-size: 5em; }
