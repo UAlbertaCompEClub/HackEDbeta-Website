@@ -419,7 +419,18 @@ footer {
 
 //  Mobile Styles (Tablet)
 @include media(tablet){
+    .bubble-nav {
+        .bubble {
+            width: 180px;
+            height: 180px;
+            opacity: 0.5;
 
+            h3 {
+                font-size: 2.5em;
+                line-height: 1em;
+            }
+        }
+    }
 }
 
 //  Mobile Styles (Phone)
@@ -437,12 +448,7 @@ footer {
 
             h3 {
                 font-size: 1.4em;
-                font-weight: 300;
                 line-height: 1em;
-                margin: 0;
-                position: relative;
-                top: 50%;
-                @include transform(translateY(-50%));   //bring the text down halfway
             }
         }
     }
