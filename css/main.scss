@@ -93,7 +93,7 @@ button {
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
-    font-weight: bold; 
+    font-weight: bold;
     border-radius: 5px;
     box-shadow: rgba(70, 70, 70, 0.2) 0 1px 0 1px;
 }
@@ -231,7 +231,7 @@ header {
             float: left;    //lines them up horizontally, not vertically
             margin: 0px;
             padding: 2em 15vw 2em 15vw;
-            background-color: transparent !important; 
+            background-color: transparent !important;
         }
     }
     //color text styles (only for headings and bold)
@@ -271,13 +271,13 @@ header {
 
 //  FAQ Section
 .faq {
-    background-color: $color-red; 
-    padding-top: 7vh; 
-    margin-bottom: 13vh; 
+    background-color: $color-red;
+    padding-top: 7vh;
+    margin-bottom: 13vh;
     //"FAQ" title
     h1 {
         text-align: center;
-        margin-bottom: 2.5rem; 
+        margin-bottom: 2.5rem;
     }
     .question-section {
         width: 50%;
@@ -285,14 +285,14 @@ header {
         min-height: 200px;
         //the title of this section
         h3 {
-            
+
         }
         //the list of questions / answers for this section
         ul {
-            
+
         }
         > * {
-            margin-left: 15%; 
+            margin-left: 15%;
         }
         .question {
             font-weight: 500;
@@ -314,7 +314,7 @@ header {
             &.show {
                 max-height: 300px;
                 font-size: 14px;
-                margin: 10px; 
+                margin: 10px;
             }
         }
     }
@@ -323,26 +323,26 @@ header {
 //  Sponsors Section
 .sponsors {
     text-align: center;
-    padding-bottom: 3em; 
+    padding-bottom: 3em;
     margin: 0 15%;
     h1 {
-        margin-bottom: 2.5rem; 
+        margin-bottom: 2.5rem;
     }
     .sponsor {
         margin: 10px;
         display: inline;
         img {
-            width: auto; 
-            height: auto; 
+            width: auto;
+            height: auto;
         }
         &.gold img {
-            max-width: 30%; 
+            max-width: 30%;
         }
         &.silver img {
-            max-width: 22%; 
+            max-width: 22%;
         }
         &.bronze img {
-            max-width: 15%; 
+            max-width: 15%;
         }
     }
 }
@@ -366,7 +366,7 @@ footer {
     }
     & > section {
         width: 25%;
-        margin: auto; 
+        margin: auto;
     }
     .copyright {
         width: 100%;
@@ -375,7 +375,7 @@ footer {
         text-align: center;
     }
 }
-  
+
 @media screen and (max-width: 1280px) {
     footer {
         padding: 4em 4em 2em 4em;
@@ -389,8 +389,8 @@ footer {
         margin: 0 0 3em 0;
         width: 100%;
         & > section {
-            width: 40%; 
-            margin: auto; 
+            width: 40%;
+            margin: auto;
         }
         .copyright {
             text-align: left;
@@ -419,7 +419,7 @@ footer {
 
 //  Mobile Styles (Tablet)
 @include media(tablet){
-    
+
 }
 
 //  Mobile Styles (Phone)
@@ -427,5 +427,23 @@ footer {
     .container {
         width: 100%;
         margin: 0;
+    }
+
+    .bubble-nav {
+        .bubble {
+            width: 90px;
+            height: 90px;
+            opacity: 0.5;
+
+            h3 {
+                font-size: 1.4em;
+                font-weight: 300;
+                line-height: 1em;
+                margin: 0;
+                position: relative;
+                top: 50%;
+                @include transform(translateY(-50%));   //bring the text down halfway
+            }
+        }
     }
 }
