@@ -215,7 +215,6 @@ header {
 //  Page Slideshow
 .pages-container {
     width: 100vw;  //this is one screen width's wide
-    min-height: 500px;
     margin-top: 10px;
     margin-bottom: 5vh;
     margin-left: 0;
@@ -370,7 +369,7 @@ footer {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     padding: 5em 10em 3em 10em;
-    width: calc(100% + 2em);
+    width: 100%;
     margin: 0 0 0em -2em;
     background-color: #efefef;
     a {
@@ -387,47 +386,6 @@ footer {
         text-align: center;
     }
 }
-
-@media screen and (max-width: 1280px) {
-    footer {
-        padding: 4em 4em 2em 4em;
-    }
-}
-
-@media screen and (max-width: 980px) {
-    footer {
-        padding: 4em 3em 2em 3em ;
-        display: block;
-        margin: 0 0 3em 0;
-        width: 100%;
-        & > section {
-            width: 40%;
-            margin: auto;
-        }
-        .copyright {
-            text-align: left;
-        }
-    }
-}
-
-@media screen and (max-width: 736px) {
-    footer {
-        padding: 3em 2em 1em 2em ;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    footer {
-        padding: 3em 1.5em 1em 1.5em ;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    footer {
-        padding: 2.5em 1em 0.5em 1em ;
-    }
-}
-
 
 //  Mobile Styles (Tablet)
 @include media(tablet){
@@ -508,6 +466,24 @@ footer {
                 flex-basis: 15%;
                 max-width: 15%;
             }
+        }
+    }
+
+    footer {
+        padding: 0;
+        padding-top: 1em;
+        margin: 0;
+        display: block;
+
+        & > section {
+            width: 80%;
+        }
+
+        .copyright {
+            width: 100%;
+            margin: 2.5em 0 1.2em 0;
+            font-size: 0.8em;
+            text-align: center;
         }
     }
 }
