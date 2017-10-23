@@ -1,0 +1,20 @@
+{
+  "name": "hacked-beta",
+  "version": "1.0.0",
+  "description": "hacked beta website",
+  "scripts": {
+    "start": "node_modules/node-sass/bin/node-sass css/main.scss -wo css/ --source-map css/ & node_modules/live-server/live-server.js . --ignore=\"main.scss,main.css.map,.git\" --no-browser"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CompEClubHackEDHackathons/CompEClubHackEDHackathons.github.io"
+  },
+  "keywords": [],
+  "author": "Compe Club",
+  "license": "WTFPL",
+  "homepage": "http://hackedbeta.compeclub.com/",
+  "dependencies": {
+    "live-server": "^1.0.0",
+    "node-sass": "^3.8.0"
+  }
+}
