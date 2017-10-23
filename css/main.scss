@@ -231,6 +231,9 @@ header {
             margin: 0px;
             padding: 2em 15vw 2em 15vw;
             background-color: transparent !important;
+            p {
+                margin-top: 0; 
+            }
         }
     }
     //color text styles (only for headings and bold)
@@ -311,6 +314,15 @@ header {
             margin: 0;
             max-height: 0px;
             overflow: hidden;
+            a {
+                transition: none; 
+                font-style: italic;
+                color: white; 
+                text-decoration: none;
+                &:hover {
+                    color: #464646; 
+                }
+            }
             @include transition(max-height 0.5s ease);
             &.show {
                 max-height: 300px;
