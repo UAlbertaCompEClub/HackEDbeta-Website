@@ -88,6 +88,10 @@ header {
     visibility: hidden; }
     header .cursor.show {
       visibility: visible; }
+  header a {
+    color: #E06D6F;
+    font-weight: 600;
+    text-decoration: none; }
   header h3 {
     color: #464646;
     font-family: "Libre Baskerville", serif;

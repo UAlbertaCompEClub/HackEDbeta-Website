@@ -1,6 +1,6 @@
 function changeAccentColor(color) {
     $(".faq").css({ background: color });
-    $("footer a").css({color: color })
+    $("footer a, header a").css({color: color })
 }
 
 //runs the given function when the HTML document has loaded (also known as the DOM)

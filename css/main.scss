@@ -138,6 +138,11 @@ header {
             visibility: visible;
         }
     }
+    a {
+        color: $color-red; 
+        font-weight: 600; 
+        text-decoration: none; 
+    }
     //Subtitle
     h3 {
         color: $color-subtitle;
