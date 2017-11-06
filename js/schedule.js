@@ -1,3 +1,5 @@
+/* eslint-disable one-var */
+
 var hackedTime = [new Date('2017/11/18 09:00'), new Date('2017/11/19 15:00')];
 
 d3.json('../schedule.json', function(error, json) {
@@ -58,12 +60,59 @@ d3.json('../schedule.json', function(error, json) {
         .attr('height', boxHeight)
         .attr('fill', 'rgb(128,177,245)');
 
-    items.append('text')
+    var texts = items.append('text')
         .classed('schedule-text', true)
-        .text(function(d) { return d.title; })
-        .style('text-anchor', function(d) { return d.type === 'single' ? 'middle' : null; })
-        .attr('x', function(d) { return boxX(d) + boxWidth(d) / 2; })
-        .attr('y', function(d) { return boxY(d) + boxHeight(d) / 2; });
+        .attr('x', function(d) { return boxX(d) + 10; })
+        .attr('y', function(d) { return boxY(d) + 10; })
+        .attr('dy', 0)
+        .text(function(d) { return d.description; });
+
+    texts.call(wrap, svgBox.width * 0.4);
+
+    texts.append('tspan')
+        .classed('item-title', true)
+        .attr('x', function(d) { return boxX(d) + 10; })
+        .attr('y', function(d) { return boxY(d) + 10; })
+        .text(function(d) { return d.title; });
+
+    // https://bl.ocks.org/mbostock/7555321
+    function wrap(text, width, height) {
+        text.each(function(d) {
+            var text = d3.select(this),
+                words = text.text().split(/\s+/).reverse(),
+                word,
+                line = [],
+                lineNumber = 1,
+                lineHeight = 1.1, // ems
+                startHeight = 1.5,
+                x = text.attr('x'),
+                y = text.attr('y'),
+                dy = parseFloat(text.attr('dy')),
+                tspan = text.text(null).append('tspan')
+                    .attr('x', x)
+                    .attr('y', y)
+                    .attr('dy', dy + lineNumber * lineHeight + startHeight + 'em');
+
+            while (word = words.pop()) {
+              line.push(word);
+              tspan.text(line.join(' '));
+              if (tspan.node().getComputedTextLength() > width) {
+                line.pop();
+                tspan.text(line.join(' '));
+                line = [word];
+                tspan = text.append('tspan')
+                    .attr('x', x)
+                    .attr('y', y)
+                    .attr('dy', dy + ++lineNumber * lineHeight + startHeight + 'em')
+                    .text(word);
+              }
+              if (text.node().getBBox().height > boxHeight(d) - 50) {
+                  tspan.remove();
+                  return;
+              }
+            }
+      });
+}
 
     // y axis
     var yAxis = d3.axisLeft(hourScale)

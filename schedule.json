@@ -3,7 +3,7 @@
         "startTime": "2017/11/18 09:00",
         "endTime": "2017/11/18 10:00",
         "title": "Registration",
-        "description": "This is a description",
+        "description": "Lorem ipsum dolor sit amet, nusquam repudiandae at quo. Facete dissentias in nam, harum laoreet ceteros ei vim. Enim sapientem sea ea, qui ut exerci sapientem. Id duo appetere concludaturque, enim invidunt voluptatibus vis eu, dicta aliquam persecuti eos ut. Error tincidunt no vix, ea sint mentitum repudiare quo. At vim idque graecis probatus, id viris meliore per. Mei ad alia principes, pro ut diam erat solum. Cu verterem forensibus adversarium sea, ei vulputate suscipiantur sea.",
         "type": "single",
         "area": [0, 1]
     },
@@ -14,13 +14,6 @@
         "description": "This is a description",
         "type": "single",
         "area": [0, 1]
-    },
-    {
-        "startTime": "2017/11/18 12:00",
-        "endTime": "2017/11/18 12:00",
-        "title": "Hacking begins!",
-        "description": "This is a description",
-        "type": "marker"
     },
     {
         "startTime": "2017/11/18 12:00",
@@ -132,5 +125,12 @@
         "description": "This is a description",
         "type": "single",
         "area": [0, 1]
+    },
+    {
+        "startTime": "2017/11/18 12:00",
+        "endTime": "2017/11/18 12:00",
+        "title": "Hacking begins!",
+        "description": "This is a description",
+        "type": "marker"
     }
 ]

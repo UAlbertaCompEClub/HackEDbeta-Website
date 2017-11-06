@@ -24,3 +24,12 @@ g.tick text {
 path.domain {
     stroke: none;
 }
+
+.item-title {
+    font-size: 1.5em;
+    dominant-baseline: text-before-edge;
+}
+
+.schedule-text {
+    font-size: 1em;
+}
