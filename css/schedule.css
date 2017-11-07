@@ -27,7 +27,15 @@ path.domain {
 
 .item-title {
     font-size: 1.5em;
+}
+
+.item-title.single {
     dominant-baseline: text-before-edge;
+}
+
+.item-title.marker {
+    dominant-baseline: text-before-edge;
+    text-anchor: middle;
 }
 
 .schedule-text {

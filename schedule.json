@@ -5,7 +5,8 @@
         "title": "Registration",
         "description": "Lorem ipsum dolor sit amet, nusquam repudiandae at quo. Facete dissentias in nam, harum laoreet ceteros ei vim. Enim sapientem sea ea, qui ut exerci sapientem. Id duo appetere concludaturque, enim invidunt voluptatibus vis eu, dicta aliquam persecuti eos ut. Error tincidunt no vix, ea sint mentitum repudiare quo. At vim idque graecis probatus, id viris meliore per. Mei ad alia principes, pro ut diam erat solum. Cu verterem forensibus adversarium sea, ei vulputate suscipiantur sea.",
         "type": "single",
-        "area": [0, 1]
+        "area": [0, 1],
+        "colour": "blue"
     },
     {
         "startTime": "2017/11/18 10:30",
@@ -13,14 +14,16 @@
         "title": "Opening Ceremony",
         "description": "This is a description",
         "type": "single",
-        "area": [0, 1]
+        "area": [0, 1],
+        "colour": "blue"
     },
     {
         "startTime": "2017/11/18 12:00",
         "endTime": "2017/11/19 12:00",
         "title": "Hacking Time",
-        "description": "Do the thing!",
-        "type": "continuous"
+        "description": "",
+        "type": "continuous",
+        "colour": "orange"
     },
     {
         "startTime": "2017/11/18 12:00",
@@ -28,7 +31,8 @@
         "title": "Workshop 1",
         "description": "This is a description",
         "type": "single",
-        "area": [0, 0]
+        "area": [0, 0],
+        "colour": "green"
     },
     {
         "startTime": "2017/11/18 13:00",
@@ -36,7 +40,8 @@
         "title": "Workshop 2",
         "description": "This is a description",
         "type": "single",
-        "area": [0, 0]
+        "area": [0, 0],
+        "colour": "green"
     },
     {
         "startTime": "2017/11/18 14:00",
@@ -44,7 +49,8 @@
         "title": "Workshop 3",
         "description": "This is a description",
         "type": "single",
-        "area": [0, 0]
+        "area": [0, 0],
+        "colour": "green"
     },
     {
         "startTime": "2017/11/18 15:00",
@@ -52,7 +58,8 @@
         "title": "Workshop 4",
         "description": "This is a description",
         "type": "single",
-        "area": [0, 0]
+        "area": [0, 0],
+        "colour": "green"
     },
     {
         "startTime": "2017/11/18 16:00",
@@ -60,7 +67,8 @@
         "title": "Workshop 5",
         "description": "This is a description",
         "type": "single",
-        "area": [0, 0]
+        "area": [0, 0],
+        "colour": "green"
     },
     {
         "startTime": "2017/11/18 17:00",
@@ -68,7 +76,8 @@
         "title": "Workshop 6",
         "description": "This is a description",
         "type": "single",
-        "area": [0, 0]
+        "area": [0, 0],
+        "colour": "green"
     },
     {
         "startTime": "2017/11/18 18:00",
@@ -76,7 +85,8 @@
         "title": "Dinner",
         "description": "Eat the food",
         "type": "single",
-        "area": [1, 1]
+        "area": [1, 1],
+        "colour": "blue"
     },
     {
         "startTime": "2017/11/19 00:00",
@@ -84,7 +94,8 @@
         "title": "Snacks",
         "description": "Eat the food",
         "type": "single",
-        "area": [1, 1]
+        "area": [1, 1],
+        "colour": "blue"
     },
     {
         "startTime": "2017/11/19 04:00",
@@ -92,7 +103,8 @@
         "title": "More snacks",
         "description": "Eat the food",
         "type": "single",
-        "area": [1, 1]
+        "area": [1, 1],
+        "colour": "blue"
     },
     {
         "startTime": "2017/11/19 08:00",
@@ -100,7 +112,8 @@
         "title": "Breakfast",
         "description": "Eat the food",
         "type": "single",
-        "area": [1, 1]
+        "area": [1, 1],
+        "colour": "blue"
     },
     {
         "startTime": "2017/11/19 12:00",
@@ -108,7 +121,8 @@
         "title": "Judging Time",
         "description": "This is a description",
         "type": "single",
-        "area": [0, 0]
+        "area": [0, 0],
+        "colour": "green"
     },
     {
         "startTime": "2017/11/19 12:00",
@@ -116,7 +130,8 @@
         "title": "Lunch",
         "description": "Eat the food",
         "type": "single",
-        "area": [1, 1]
+        "area": [1, 1],
+        "colour": "blue"
     },
     {
         "startTime": "2017/11/19 13:00",
@@ -124,13 +139,23 @@
         "title": "Closing Presentations",
         "description": "This is a description",
         "type": "single",
-        "area": [0, 1]
+        "area": [0, 1],
+        "colour": "blue"
     },
     {
         "startTime": "2017/11/18 12:00",
         "endTime": "2017/11/18 12:00",
         "title": "Hacking begins!",
-        "description": "This is a description",
-        "type": "marker"
+        "description": "",
+        "type": "marker",
+        "colour": "green"
+    },
+    {
+        "startTime": "2017/11/19 12:00",
+        "endTime": "2017/11/19 12:00",
+        "title": "Hacking ends!",
+        "description": "",
+        "type": "marker",
+        "colour": "red"
     }
 ]
