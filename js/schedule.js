@@ -12,6 +12,22 @@ d3.json('../schedule.json', function(error, json) {
         return item.area ? item.area[1] + 1 : 0;
     });
 
+    var gradients = svg.append('defs')
+        .append('linearGradient')
+        .attr('id', 'rectGradient')
+        .attr('x1', 0)
+        .attr('x2', 0)
+        .attr('y1', 0)
+        .attr('y2', '100%');
+
+    gradients.append('stop')
+        .attr('offset', '0%')
+        .attr('stop-color', 'rgba(128,177,245,1)');
+
+    gradients.append('stop')
+        .attr('offset', '100%')
+        .attr('stop-color', 'rgba(128,177,245,0.5)');
+
     function boxX(d) {
         return svgBox.width / columns * (d.area ? d.area[0] : 0);
     }
@@ -58,7 +74,7 @@ d3.json('../schedule.json', function(error, json) {
         .attr('y', boxY)
         .attr('width', boxWidth)
         .attr('height', boxHeight)
-        .attr('fill', 'rgb(128,177,245)');
+        .attr('fill', 'url(#rectGradient)');
 
     var texts = items.append('text')
         .classed('schedule-text', true)
