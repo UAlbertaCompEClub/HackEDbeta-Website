@@ -1,0 +1,540 @@
+//  Colors
+$color-blue: rgb(128,177,245);
+$color-green: rgb(148,211,163);
+$color-red: rgb(224,109,111);
+$color-yellow: rgb(241,195,127);
+$color-white: rgb(255,255,255);
+$color-subtitle: rgb(70,70,70);
+$color-text: rgb(33,37,41);
+$color-background: rgb(241,241,241);
+
+$color-blue-fifty: rgb(128,177,245);
+$color-green-fifty: rgba(148,211,163,0.5);
+$color-red-fifty: rgba(224,109,111,0.5);
+$color-yellow-fifty: rgba(241,195,127,0.5);
+
+//  Fonts
+//
+//  (the commas denote the order in which the fonts are loaded, if
+//  the loading failed, the next specified font is loaded)
+$font-family-default:   -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,sans-serif;
+$font-family-text:      "Libre Baskerville", serif;
+$font-family-beta:      "Saira Condensed", sans-serif;
+
+//  Mixins (Helper functions for Cross-Browser styles)
+@mixin transform($args) {
+  -webkit-transform: $args;
+     -moz-transform: $args;
+      -ms-transform: $args;
+       -o-transform: $args;
+          transform: $args;
+}
+@mixin transition($args) {
+  -webkit-transition: $args;
+     -moz-transition: $args;
+      -ms-transition: $args;
+       -o-transition: $args;
+          transition: $args;
+}
+//mixin to handle media types
+@mixin media($type) {
+    @if $type == tablet {
+        @media only screen and (min-width:768px) and (max-width:991px) {    //anything between 768px and 991px wide is a tablet
+            @content;
+        }
+    }
+    @else if $type == phone {
+        @media only screen and (max-width:767px) {  //anything smaller than 767px wide is a phone
+            @content;
+        }
+    }
+}
+
+//  Base Element Styles
+html {
+    box-sizing: border-box;
+    font-family: sans-serif;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -ms-overflow-style: scrollbar;
+    -webkit-tap-highlight-color: transparent;
+}
+body {
+    margin: 0;
+    font-family: $font-family-default;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: $color-text;
+    background-color: $color-background;
+    overflow-x: hidden;
+}
+*, ::after, ::before {
+    box-sizing: inherit;
+}
+h1,h2,h3,h4,h5,h6 {
+    margin-top: 0;
+    margin-bottom: .5rem;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+}
+b, strong {
+    font-weight: bold
+}
+a {
+    cursor: pointer;
+    @include transition(all 0.6s ease);
+}
+button {
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: rgba(70, 70, 70, 0.2) 0 1px 0 1px;
+}
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table
+}
+.clearfix:after {
+    clear: both
+}
+//for containing stuff, duh
+.container {
+    width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+    @include transform(translate3d(0, 0, 0));
+}
+
+//  Header Section
+header {
+    width: 90%;
+    margin: 25vh auto 0vh auto;
+    text-align: center;
+    //HackED Beta Title
+    h1 {
+        font-size: 5em;
+    }
+    .prompt {
+        font-weight: 900;
+    }
+    .beta {
+        font-size: 0.6em;
+        font-weight: 100;
+        margin-left: -16px;
+    }
+    .cursor {
+        font-weight: 900;
+        visibility: hidden;
+        &.show {
+            //when we're showing the cursor, override visibility: hidden
+            visibility: visible;
+        }
+    }
+    a {
+        color: $color-red;
+        font-weight: 600;
+        text-decoration: none;
+    }
+    //Subtitle
+    h3 {
+        color: $color-subtitle;
+        font-family: $font-family-text;
+        font-style: italic;
+        font-size: 1.125em;
+        font-weight: 400;
+        line-height: 1.875em;
+        -webkit-font-smoothing: antialiased;    //remove font blurryness
+        padding: 0 10%;
+        //Line above and below
+        &:before, &:after {
+            content: "";
+            width: 60%;
+            margin: 1.5em 20% 1em 20%;
+            height: 0px;
+            display: block;
+            border: 1px solid;
+            border-style: inset;
+        }
+    }
+}
+
+//  Page Slideshow Selector
+.bubble-nav {
+    display: table;
+    margin: 0 auto;
+    //The actual colored bubbles
+    .bubble {
+        width: 212px;
+        height: 212px;
+        border-radius: 50%;     //50% so that the curve takes half the width ie: a circle
+        box-shadow: rgba(70, 70, 70, 0.2) 0 1px 0 1px;
+        margin-top: 2em;
+        margin-left: -10px;
+        color: $color-white;
+        text-align: center;
+        position: relative;
+        float: left;
+        //default opacity is 0.4, transition applies when it gets changed
+        opacity: 0.4;
+        @include transition(opacity 1s ease);
+        &:hover {
+            //just flash a bit when you hover over it
+            opacity: 0.7;
+        }
+        &.active {
+            //when selected, override opacity: 0.4 and show full opacity
+            opacity: 1.0;
+        }
+        //styles for the text in the bubble
+        h3 {
+            font-size: 3em;
+            font-weight: 200;
+            line-height: 0.804em;
+            margin: 0;
+            position: relative;
+            top: 50%;
+            @include transform(translateY(-50%));   //bring the text down halfway
+        }
+    }
+    //background colors for each color
+    .redback { background: $color-red; }
+    .blueback { background: $color-blue; }
+    .greenback { background: $color-green; }
+    .yellowback { background: $color-yellow; }
+}
+
+// Content styles
+.content {
+    //hide any content overflowing on the x axis (horizontally)
+    overflow: hidden;
+}
+
+//  Page Slideshow
+.pages-container {
+    width: 100vw;  //this is one screen width's wide
+    margin-top: 10px;
+    margin-bottom: 5vh;
+    margin-left: 0;
+    position: relative;  //only relatively positioned elements will work with overflow / overflow-x: hidden
+    top: 0;
+    .pages-invisible-container {
+        width: 400vw;   //this is 4 screen widths wide, to hold 4 pages
+        margin-left: 0;    //this value gets changed when the pages scroll
+        @include transition(margin-left 0.3s ease);    //this animates the change in left
+        .page {
+            width: 100vw;   //each page is one screen width's wide
+            box-sizing: border-box;  //ensures the width is never more than 100vw, even with padding/border
+            float: left;    //lines them up horizontally, not vertically
+            margin: 0px;
+            padding: 2em 15vw 2em 15vw;
+            background-color: transparent !important;
+            p {
+                margin-top: 0;
+            }
+        }
+    }
+    //color text styles (only for headings and bold)
+    .red {
+        b, strong, h1, h2, h3, h4, h5, h6 {
+            color: $color-red;
+        },
+        button {
+            background-color: $color-red;
+        }
+    }
+    .blue {
+        b, strong, h1, h2, h3, h4, h5, h6 {
+            color: $color-blue;
+        },
+        button {
+            background-color: $color-blue;
+        }
+    }
+    .green {
+        b, strong, h1, h2, h3, h4, h5, h6 {
+            color: $color-green;
+        },
+        button {
+            background-color: $color-green;
+        }
+    }
+    .yellow {
+        b, strong, h1, h2, h3, h4, h5, h6 {
+            color: $color-yellow;
+        },
+        button {
+            background-color: $color-yellow;
+        }
+    }
+}
+
+// APIs
+.apis {
+    h1 {
+        text-align: center;
+    }
+    .apis-flex {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 100px;
+
+        .api-box {
+            width: 100%;
+            padding: 20px;
+            margin: 50px;
+            border-radius: 20px;
+            background-color: $color-red-fifty;
+
+            a {
+                display: flex;
+                justify-content: center;
+
+                img {
+                    width: 50%;
+                    align-self: center;
+                }
+            }
+        }
+    }
+}
+
+//  FAQ Section
+.faq {
+    background-color: $color-red;
+    padding-top: 7vh;
+    margin-bottom: 13vh;
+    color: $color-white;
+    //"FAQ" title
+    h1 {
+        text-align: center;
+        margin-bottom: 2.5rem;
+    }
+    .question-section {
+        width: 50%;
+        float: left;
+        min-height: 200px;
+        //the title of this section
+        h3 {
+
+        }
+        //the list of questions / answers for this section
+        ul {
+
+        }
+        > * {
+            margin-left: 15%;
+        }
+        .question {
+            font-weight: 500;
+            display: inline-block;
+            margin: 0;
+            padding: 3px 9px;
+            color: $color-white;
+            cursor: pointer;
+            &:hover, &.active {
+                background-color: #e6e6e6;
+                border-radius: 4px;
+                color: $color-text;
+            }
+        }
+        .answer {
+            margin: 0;
+            max-height: 0px;
+            overflow: hidden;
+            a {
+                transition: none;
+                font-style: italic;
+                color: white;
+                text-decoration: none;
+                &:hover {
+                    color: #464646;
+                }
+            }
+            @include transition(max-height 0.5s ease);
+            &.show {
+                max-height: 300px;
+                font-size: 14px;
+                margin: 10px;
+            }
+        }
+    }
+}
+
+//  Sponsors Section
+.sponsors {
+    text-align: center;
+    margin: 0 15%;
+    h1 {
+        margin-bottom: 2.5rem;
+    }
+    .sponsor_tier {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0em;
+    }
+    .sponsor {
+        flex-grow: 1;
+        margin: 2em;
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+        &.gold {
+            flex-basis: 25%;
+            max-width: 25%;
+        }
+        &.silver {
+            flex-basis: 15%;
+            max-width: 15%;
+        }
+        &.bronze {
+            flex-basis: 15%;
+            max-width: 15%;
+        }
+    }
+}
+
+//Footer section
+footer {
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -moz-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: 5em 10em 3em 10em;
+    width: 100%;
+    margin: 0 0 0em -2em;
+    background-color: $color-background;
+    a {
+        color: #E06D6F;
+    }
+    & > section {
+        width: 25%;
+        margin: auto;
+    }
+    .copyright {
+        width: 100%;
+        margin: 2.5em 0 2em 0;
+        font-size: 0.8em;
+        text-align: center;
+    }
+}
+
+//  Mobile Styles (Tablet)
+@include media(tablet){
+    .bubble-nav {
+        .bubble {
+            width: 180px;
+            height: 180px;
+            opacity: 0.5;
+
+            h3 {
+                font-size: 2.5em;
+                line-height: 1em;
+            }
+        }
+    }
+}
+
+//  Mobile Styles (Phone)
+@include media(phone){
+    .container {
+        width: 100%;
+        margin: 0;
+    }
+
+    header {
+        h1 {
+            font-size: 2.7em;
+        }
+
+        .beta {
+            margin-left: 0px;
+        }
+    }
+
+    .bubble-nav {
+        .bubble {
+            width: 90px;
+            height: 90px;
+            opacity: 0.5;
+
+            h3 {
+                font-size: 1.4em;
+                line-height: 1em;
+            }
+        }
+    }
+
+    .pages-container {
+        margin-bottom: 2vh;
+    }
+
+    .faq {
+        .question-section {
+            width: 100%;
+
+            > * {
+                margin-left: 0%;
+            }
+        }
+    }
+
+    .sponsors {
+        margin: 0 0;
+        .sponsor_tier {
+            margin-bottom: 2em;
+        }
+        .sponsor {
+            margin: 1em;
+            &.gold {
+                flex-basis: 38%;
+                max-width: 38%;
+            }
+            &.silver {
+                flex-basis: 22%;
+                max-width: 22%;
+            }
+            &.bronze {
+                flex-basis: 15%;
+                max-width: 15%;
+            }
+        }
+    }
+
+    footer {
+        padding: 0;
+        padding-top: 1em;
+        margin: 0;
+        display: block;
+
+        & > section {
+            width: 80%;
+        }
+
+        .copyright {
+            width: 100%;
+            margin: 2.5em 0 1.2em 0;
+            font-size: 0.8em;
+            text-align: center;
+        }
+    }
+}
