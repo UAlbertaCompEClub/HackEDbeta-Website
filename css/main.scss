@@ -488,6 +488,17 @@ footer {
         margin-bottom: 2vh;
     }
 
+    .apis {
+        .apis-flex {
+            flex-direction: column;
+
+            .api-box {
+                width: auto;
+                margin: 25px 50px;
+            }
+        }
+    }
+
     .faq {
         .question-section {
             width: 100%;

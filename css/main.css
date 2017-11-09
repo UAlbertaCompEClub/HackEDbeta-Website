@@ -346,6 +346,11 @@ footer {
       line-height: 1em; }
   .pages-container {
     margin-bottom: 2vh; }
+  .apis .apis-flex {
+    flex-direction: column; }
+    .apis .apis-flex .api-box {
+      width: auto;
+      margin: 25px 50px; }
   .faq .question-section {
     width: 100%; }
     .faq .question-section > * {
