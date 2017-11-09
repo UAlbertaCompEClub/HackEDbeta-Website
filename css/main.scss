@@ -1,17 +1,12 @@
 //  Colors
-$color-blue: rgb(128,177,245);
-$color-green: rgb(148,211,163);
-$color-red: rgb(224,109,111);
-$color-yellow: rgb(241,195,127);
-$color-white: rgb(255,255,255);
-$color-subtitle: rgb(70,70,70);
-$color-text: rgb(33,37,41);
-$color-background: rgb(241,241,241);
-
-$color-blue-fifty: rgb(128,177,245);
-$color-green-fifty: rgba(148,211,163,0.5);
-$color-red-fifty: rgba(224,109,111,0.5);
-$color-yellow-fifty: rgba(241,195,127,0.5);
+$color-blue: #80B1F5;
+$color-green : #94D3A3;
+$color-red: #E06D6F;
+$color-yellow: #F1C37F;
+$color-white: #FFFFFF;
+$color-subtitle: #464646;
+$color-text: #212529;
+$color-background: #F1F1F1;
 
 //  Fonts
 //
@@ -144,9 +139,9 @@ header {
         }
     }
     a {
-        color: $color-red;
-        font-weight: 600;
-        text-decoration: none;
+        color: $color-red; 
+        font-weight: 600; 
+        text-decoration: none; 
     }
     //Subtitle
     h3 {
@@ -242,7 +237,7 @@ header {
             padding: 2em 15vw 2em 15vw;
             background-color: transparent !important;
             p {
-                margin-top: 0;
+                margin-top: 0; 
             }
         }
     }
@@ -277,36 +272,6 @@ header {
         },
         button {
             background-color: $color-yellow;
-        }
-    }
-}
-
-// APIs
-.apis {
-    h1 {
-        text-align: center;
-    }
-    .apis-flex {
-        display: flex;
-        justify-content: space-around;
-        margin-bottom: 100px;
-
-        .api-box {
-            width: 100%;
-            padding: 20px;
-            margin: 50px;
-            border-radius: 20px;
-            background-color: $color-red-fifty;
-
-            a {
-                display: flex;
-                justify-content: center;
-
-                img {
-                    width: 50%;
-                    align-self: center;
-                }
-            }
         }
     }
 }
@@ -355,12 +320,12 @@ header {
             max-height: 0px;
             overflow: hidden;
             a {
-                transition: none;
+                transition: none; 
                 font-style: italic;
-                color: white;
+                color: white; 
                 text-decoration: none;
                 &:hover {
-                    color: #464646;
+                    color: #464646; 
                 }
             }
             @include transition(max-height 0.5s ease);
