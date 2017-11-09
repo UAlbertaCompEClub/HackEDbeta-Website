@@ -14,7 +14,7 @@ body {
   font-weight: 400;
   line-height: 1.5;
   color: #212529;
-  background-color: #F1F1F1;
+  background-color: #f1f1f1;
   overflow-x: hidden; }
 
 *, ::after, ::before {
@@ -89,7 +89,7 @@ header {
     header .cursor.show {
       visibility: visible; }
   header a {
-    color: #E06D6F;
+    color: #e06d6f;
     font-weight: 600;
     text-decoration: none; }
   header h3 {
@@ -120,7 +120,7 @@ header {
     box-shadow: rgba(70, 70, 70, 0.2) 0 1px 0 1px;
     margin-top: 2em;
     margin-left: -10px;
-    color: #FFFFFF;
+    color: white;
     text-align: center;
     position: relative;
     float: left;
@@ -147,13 +147,13 @@ header {
       -o-transform: translateY(-50%);
       transform: translateY(-50%); }
   .bubble-nav .redback {
-    background: #E06D6F; }
+    background: #e06d6f; }
   .bubble-nav .blueback {
-    background: #80B1F5; }
+    background: #80b1f5; }
   .bubble-nav .greenback {
-    background: #94D3A3; }
+    background: #94d3a3; }
   .bubble-nav .yellowback {
-    background: #F1C37F; }
+    background: #f1c37f; }
 
 .content {
   overflow: hidden; }
@@ -183,31 +183,51 @@ header {
       .pages-container .pages-invisible-container .page p {
         margin-top: 0; }
   .pages-container .red b, .pages-container .red strong, .pages-container .red h1, .pages-container .red h2, .pages-container .red h3, .pages-container .red h4, .pages-container .red h5, .pages-container .red h6 {
-    color: #E06D6F; }
+    color: #e06d6f; }
   .pages-container .red,
   .pages-container .red button {
-    background-color: #E06D6F; }
+    background-color: #e06d6f; }
   .pages-container .blue b, .pages-container .blue strong, .pages-container .blue h1, .pages-container .blue h2, .pages-container .blue h3, .pages-container .blue h4, .pages-container .blue h5, .pages-container .blue h6 {
-    color: #80B1F5; }
+    color: #80b1f5; }
   .pages-container .blue,
   .pages-container .blue button {
-    background-color: #80B1F5; }
+    background-color: #80b1f5; }
   .pages-container .green b, .pages-container .green strong, .pages-container .green h1, .pages-container .green h2, .pages-container .green h3, .pages-container .green h4, .pages-container .green h5, .pages-container .green h6 {
-    color: #94D3A3; }
+    color: #94d3a3; }
   .pages-container .green,
   .pages-container .green button {
-    background-color: #94D3A3; }
+    background-color: #94d3a3; }
   .pages-container .yellow b, .pages-container .yellow strong, .pages-container .yellow h1, .pages-container .yellow h2, .pages-container .yellow h3, .pages-container .yellow h4, .pages-container .yellow h5, .pages-container .yellow h6 {
-    color: #F1C37F; }
+    color: #f1c37f; }
   .pages-container .yellow,
   .pages-container .yellow button {
-    background-color: #F1C37F; }
+    background-color: #f1c37f; }
+
+.apis h1 {
+  text-align: center; }
+
+.apis .apis-flex {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 100px; }
+  .apis .apis-flex .api-box {
+    width: 100%;
+    padding: 20px;
+    margin: 50px;
+    border-radius: 20px;
+    background-color: rgba(224, 109, 111, 0.5); }
+    .apis .apis-flex .api-box a {
+      display: flex;
+      justify-content: center; }
+      .apis .apis-flex .api-box a img {
+        width: 50%;
+        align-self: center; }
 
 .faq {
-  background-color: #E06D6F;
+  background-color: #e06d6f;
   padding-top: 7vh;
   margin-bottom: 13vh;
-  color: #FFFFFF; }
+  color: white; }
   .faq h1 {
     text-align: center;
     margin-bottom: 2.5rem; }
@@ -222,7 +242,7 @@ header {
       display: inline-block;
       margin: 0;
       padding: 3px 9px;
-      color: #FFFFFF;
+      color: white;
       cursor: pointer; }
       .faq .question-section .question:hover, .faq .question-section .question.active {
         background-color: #e6e6e6;
@@ -288,7 +308,7 @@ footer {
   padding: 5em 10em 3em 10em;
   width: 100%;
   margin: 0 0 0em -2em;
-  background-color: #F1F1F1; }
+  background-color: #f1f1f1; }
   footer a {
     color: #E06D6F; }
   footer > section {
