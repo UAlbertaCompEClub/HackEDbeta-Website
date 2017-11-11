@@ -35,18 +35,9 @@
         "colour": "green"
     },
     {
-        "startTime": "2017/11/18 13:00",
-        "endTime": "2017/11/18 14:00",
-        "title": "Workshop 2",
-        "description": "DriveWyze",
-        "type": "single",
-        "area": [0, 0],
-        "colour": "green"
-    },
-    {
         "startTime": "2017/11/18 14:00",
         "endTime": "2017/11/18 15:00",
-        "title": "Workshop 3",
+        "title": "Workshop 2",
         "description": "Curtis Malainey - Intro to Beginner and Advanced Git",
         "type": "single",
         "area": [0, 0],
@@ -55,7 +46,7 @@
     {
         "startTime": "2017/11/18 15:00",
         "endTime": "2017/11/18 16:00",
-        "title": "Workshop 4",
+        "title": "Workshop 3",
         "description": "Jobber - Intro to WebDev",
         "type": "single",
         "area": [0, 0],
@@ -64,7 +55,7 @@
     {
         "startTime": "2017/11/18 16:00",
         "endTime": "2017/11/18 17:00",
-        "title": "Workshop 5",
+        "title": "Workshop 4",
         "description": "DevFacto - Beginning Development in iOS",
         "type": "single",
         "area": [0, 0],
@@ -73,7 +64,7 @@
     {
         "startTime": "2017/11/18 17:00",
         "endTime": "2017/11/18 18:00",
-        "title": "Workshop 6",
+        "title": "Workshop 5",
         "description": "George Antonious - An Android Primer",
         "type": "single",
         "area": [0, 0],
@@ -91,7 +82,7 @@
     {
         "startTime": "2017/11/18 19:00",
         "endTime": "2017/11/18 20:00",
-        "title": "Workshop 7",
+        "title": "Workshop 6",
         "description": "Steven Knudsen - Hardware / Internet of Things for Beginners",
         "type": "single",
         "area": [0, 0],
@@ -100,7 +91,7 @@
     {
         "startTime": "2017/11/18 20:00",
         "endTime": "2017/11/18 21:00",
-        "title": "Workshop 8",
+        "title": "Workshop 7",
         "description": "Veerum - Unity Development Kickstart",
         "type": "single",
         "area": [0, 0],
