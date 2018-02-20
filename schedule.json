@@ -1,0 +1,170 @@
+[
+    {
+        "startTime": "2017/11/18 09:00",
+        "endTime": "2017/11/18 10:00",
+        "title": "Registration - Doors Open",
+        "description": "",
+        "type": "single",
+        "area": [0, 1],
+        "colour": "blue"
+    },
+    {
+        "startTime": "2017/11/18 10:30",
+        "endTime": "2017/11/18 11:30",
+        "title": "Opening Ceremony",
+        "description": "",
+        "type": "single",
+        "area": [0, 1],
+        "colour": "blue"
+    },
+    {
+        "startTime": "2017/11/18 12:00",
+        "endTime": "2017/11/19 12:00",
+        "title": "Hacking Time",
+        "description": "",
+        "type": "continuous",
+        "colour": "orange"
+    },
+    {
+        "startTime": "2017/11/18 12:00",
+        "endTime": "2017/11/18 13:00",
+        "title": "Workshop 1",
+        "description": "Intuit - Quickbooks Online API",
+        "type": "single",
+        "area": [0, 0],
+        "colour": "green"
+    },
+    {
+        "startTime": "2017/11/18 14:00",
+        "endTime": "2017/11/18 15:00",
+        "title": "Workshop 2",
+        "description": "Curtis Malainey - Intro to Beginner and Advanced Git",
+        "type": "single",
+        "area": [0, 0],
+        "colour": "green"
+    },
+    {
+        "startTime": "2017/11/18 15:00",
+        "endTime": "2017/11/18 16:00",
+        "title": "Workshop 3",
+        "description": "Jobber - Intro to WebDev",
+        "type": "single",
+        "area": [0, 0],
+        "colour": "green"
+    },
+    {
+        "startTime": "2017/11/18 16:00",
+        "endTime": "2017/11/18 17:00",
+        "title": "Workshop 4",
+        "description": "DevFacto - Beginning Development in iOS",
+        "type": "single",
+        "area": [0, 0],
+        "colour": "green"
+    },
+    {
+        "startTime": "2017/11/18 17:00",
+        "endTime": "2017/11/18 18:00",
+        "title": "Workshop 5",
+        "description": "George Antonious - An Android Primer",
+        "type": "single",
+        "area": [0, 0],
+        "colour": "green"
+    },
+    {
+        "startTime": "2017/11/18 18:00",
+        "endTime": "2017/11/18 19:00",
+        "title": "Dinner",
+        "description": "",
+        "type": "single",
+        "area": [1, 1],
+        "colour": "blue"
+    },
+    {
+        "startTime": "2017/11/18 19:00",
+        "endTime": "2017/11/18 20:00",
+        "title": "Workshop 6",
+        "description": "Steven Knudsen - Hardware / Internet of Things for Beginners",
+        "type": "single",
+        "area": [0, 0],
+        "colour": "green"
+    },
+    {
+        "startTime": "2017/11/18 20:00",
+        "endTime": "2017/11/18 21:00",
+        "title": "Workshop 7",
+        "description": "Veerum - Unity Development Kickstart",
+        "type": "single",
+        "area": [0, 0],
+        "colour": "green"
+    },
+    {
+        "startTime": "2017/11/19 00:00",
+        "endTime": "2017/11/19 00:15",
+        "title": "Snacks",
+        "description": "",
+        "type": "single",
+        "area": [1, 1],
+        "colour": "blue"
+    },
+    {
+        "startTime": "2017/11/19 04:00",
+        "endTime": "2017/11/19 04:15",
+        "title": "More snacks",
+        "description": "",
+        "type": "single",
+        "area": [1, 1],
+        "colour": "blue"
+    },
+    {
+        "startTime": "2017/11/19 08:00",
+        "endTime": "2017/11/19 09:00",
+        "title": "Breakfast",
+        "description": "",
+        "type": "single",
+        "area": [1, 1],
+        "colour": "blue"
+    },
+    {
+        "startTime": "2017/11/19 12:00",
+        "endTime": "2017/11/19 13:00",
+        "title": "Judging Time",
+        "description": "",
+        "type": "single",
+        "area": [0, 0],
+        "colour": "green"
+    },
+    {
+        "startTime": "2017/11/19 12:00",
+        "endTime": "2017/11/19 13:00",
+        "title": "Lunch",
+        "description": "",
+        "type": "single",
+        "area": [1, 1],
+        "colour": "blue"
+    },
+    {
+        "startTime": "2017/11/19 13:00",
+        "endTime": "2017/11/19 14:00",
+        "title": "Closing Presentations",
+        "description": "",
+        "type": "single",
+        "area": [0, 1],
+        "colour": "blue"
+    },
+    {
+        "startTime": "2017/11/18 12:00",
+        "endTime": "2017/11/18 12:00",
+        "title": "Hacking begins!",
+        "description": "",
+        "type": "marker",
+        "colour": "green"
+    },
+    {
+        "startTime": "2017/11/19 12:00",
+        "endTime": "2017/11/19 12:00",
+        "title": "Hacking ends!",
+        "description": "",
+        "type": "marker",
+        "colour": "red"
+    }
+]
